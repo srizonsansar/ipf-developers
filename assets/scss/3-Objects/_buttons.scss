@@ -1,0 +1,21 @@
+%simple-button{
+    background-color: transparentize($color-turquoise-light, .5);
+    padding: 0 30px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 25px;
+    color: $color-blue-dark3;
+    font-weight: 500;
+    font-size: 18px;
+    transition: background-color $time-veryfast, color $time-veryfast;
+    &:hover{
+        @include responsive('xl'){
+            background-color: $color-yellow;
+            color: $color-white;
+            box-shadow: 0 0 10px transparentize($color-black, .8);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 15px;
+    &.active{
+        box-shadow: 0 0 10px transparentize($color-black, .85);
+    }
+    &__topBar{
+        display: none;
+    }
+    &__midRow{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__searchNapply{
+            display: flex;
+            align-items: center;
+            @include responsive('lg'){
+                order: 2;
+            }
+            &--link{
+                display: none;
+                @extend %simple-button;
+                @include responsive('lg'){
+                    display: inline-flex;
+                }
+            }
+            &--search{
+                cursor: pointer;
+                .icon{
+                    font-size: 20px;
+                    color: $color-turquoise;
+                    @include responsive('lg'){
+                        color: $color-black-ipf;
+                    }
+                }
+            }
+        }
+        &__logo{
+            .iconSVG{
+                width: 105px;
+                height: 70px;
+                @include responsive('lg'){
+                    width: 134px;
+                    height: 89px;
+                }
+            }
+        }
+    }
+} 

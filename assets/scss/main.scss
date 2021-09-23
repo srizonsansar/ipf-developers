@@ -3,14 +3,16 @@
 @import '1-Basic/settings';
 @import '1-Basic/responsive';
 @import '1-Basic/fonts';
+@import '1-Basic/icon';
 
 // Common Files
-@import '2-Objects/buttons';
-@import '2-Objects/container';
-@import '2-Objects/form';
+@import '3-Objects/buttons';
+@import '3-Objects/container';
+@import '3-Objects/form';
 
 // Shared
-@import '3-Shared/header';
-@import '3-Shared/footer';
+@import '4-Shared/header';
+@import '4-Shared/footer';
+@import '4-Shared/nav';
 
 // Home Page

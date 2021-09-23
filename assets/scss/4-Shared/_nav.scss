@@ -1,0 +1,64 @@
+// Nav Trigger
+.header{
+    &__midRow{
+        &__navTrigger{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 19px;
+            @include responsive('lg'){
+                display: none;
+            }
+            .line{
+                background-color: $color-turquoise;
+                height: 3px;
+                border-radius: 5px;
+                &.line1{
+                    position: relative;
+                    transform-origin: top left;
+                    transition: transform $time-veryfast;
+                    width: 70%;
+                    &.active{                        
+                        top: 1px;                        
+                        transform: rotate(45deg);
+                        width: 21px;
+                    }
+                }
+                &.line2{
+                    transition: opacity $time-veryfast;
+                    width: 18px;
+                    &.hidden{
+                        opacity: 0;
+                    }
+                }
+                &.line3{
+                    position: relative;
+                    transform-origin: bottom left;
+                    transition: transform $time-veryfast;
+                    width: 40%;
+                    &.active{                        
+                        bottom: 1px;                        
+                        transform: rotate(-45deg);
+                        width: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Side Nav
+.sideNav{
+    position: fixed;
+    top: 90px;
+    right: -300px;
+    width: 300px;
+    height: calc(100vh - 90px);
+    background-color: $color-turquoise;
+    transition: opacity $time-veryfast, right $time-veryfast;
+    &.active{
+        opacity: 1;
+        right: 0;
+    }
+}
