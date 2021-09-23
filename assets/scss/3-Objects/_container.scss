@@ -1,0 +1,20 @@
+%container{
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    @include responsive(sm){
+        max-width: 470px;
+    }
+    @include responsive(md){
+        max-width: 730px;
+    }
+    @include responsive(lg){
+        max-width: 970px;
+    }
+    @include responsive(xl){
+        max-width: 1170px;
+    }
+    @include responsive(xxl){
+        max-width: 1370px;
+    }
+}
