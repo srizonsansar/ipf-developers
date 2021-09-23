@@ -1,7 +1,8 @@
-// Color Defining
-$color-black: #000;
-$color-black2: #222;
-$color-black3: #666;
+ // Color Defining
+$color-black: #000000;
+$color-black2: #222222;
+$color-black3: #262626;
+$color-black4: #666666;
 $color-white: #fff;
 $color-grey: #ecf0f1;
 $color-grey2: #dfe5e7;
@@ -9,15 +10,18 @@ $color-grey-medium: #bdc3c7;
 $color-grey-dark: #aaaaaa;
 
 // Website Colors
-$color-red: #5a0a0a;
-$color-orange: #d35400;
-$color-green: #29ad61;
-$color-yellow-light: #eccc68;
+$color-turquoise: #35BDB2;
+$color-blue: #1BAACE;
+$color-blue-dark: #0078A5;
+$color-blue-dark2: #006085;
+$color-green: #1D893A;
+$color-yellow: #EEA10A;
+$color-black-ipf: #253347;
+$color-grey-body: #454b66;
+$color-pink: #e31d63;
 
 // Fonts
-$font-normal: 'Montserrat', sans-serif;
-$font-highlight: 'Roboto Slab', serif;
-$font-cursive:'Great Vibes', cursive;
+$font-normal: 'Museo Sans', sans-serif;
 
 // Transition timing
 $time-veryfast: .3s;
