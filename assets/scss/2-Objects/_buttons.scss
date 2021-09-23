@@ -1,0 +1,30 @@
+%button-fancy{
+    position: relative;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: $color-black2;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color $time-fast;
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 15px;
+        background-color: $color-grey;
+        transition: background-color $time-fast;
+    }
+    &:hover{
+        @include responsive('xl'){
+            color: $color-red;
+        }
+        &:before{
+            @include responsive('xl'){
+                background-color: transparentize($color-red, .9);
+            }
+        }
+    }
+}

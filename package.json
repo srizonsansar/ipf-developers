@@ -1,0 +1,24 @@
+{
+  "name": "ipf-developers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass assets/scss/main.scss assets/css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "node-sass": "^5.0.0",
+    "npm": "^7.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srizonsansar/ipf-developers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/srizonsansar/ipf-developers/issues"
+  },
+  "homepage": "https://github.com/srizonsansar/ipf-developers#readme",
+  "description": ""
+}
