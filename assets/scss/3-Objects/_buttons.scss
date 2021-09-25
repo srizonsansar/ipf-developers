@@ -15,7 +15,7 @@
         @include responsive('xl'){
             background-color: $color-yellow;
             color: $color-white;
-            box-shadow: 0 0 10px transparentize($color-black, .8);
+            box-shadow: 0 0 10px transparentize($color-black, .85);
         }
     }
 }
