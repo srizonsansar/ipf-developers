@@ -18,8 +18,22 @@
         &.firstRow{
             padding-bottom: 30px;
             @include responsive('md'){
+                position: relative;
                 display: flex;
                 flex-wrap: wrap;
+                padding-bottom: 0;
+                margin-bottom: 40px;
+                &:after{
+                    @include responsive('md'){
+                        content: "";
+                        position: absolute;
+                        left: 15px;
+                        bottom: 0;
+                        width: calc(100% - 30px);
+                        height: 2px;
+                        background-color: transparentize($color-grey3, .3);;
+                    }
+                }
             }
         }
     }
@@ -115,8 +129,21 @@
                 font-size: 15px;
                 color: $color-black-ipf;
                 font-weight: 600;
+                transition: border-color $time-veryfast, color $time-veryfast;
                 @include responsive('md'){
-
+                    border: 2px solid $color-turquoise;
+                    background-color: transparent;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                &:hover{
+                    @include responsive('xl'){
+                        border-color: $color-yellow;
+                        background-color: transparent;
+                        color: $color-yellow;
+                    }
                 }
             }
         }
@@ -140,11 +167,14 @@
                 .form{
                     &__input{
                         background-color: $color-grey3;
-                        border: none;
+                        border: 1px solid transparent;
                         height: 48px;
                         border-radius: 5px;
                         width: 100%;
                         padding: 0 40px 0 12px;
+                        &:focus{
+                            border:1px solid $color-turquoise;
+                        }
                     }
                 }
             }
@@ -234,7 +264,7 @@
                 @include responsive('md'){
                     height: auto;
                     padding: 0;
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
                 }
                 &.link{
                     text-decoration: none;
@@ -272,14 +302,12 @@
     }
     &__copyrightRow{
         border-bottom: 2px solid transparentize($color-grey3, .3);
+        margin-bottom: 30px;
         @include responsive('lg'){
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: none;
-        }
-        &.row{
-            margin-bottom: 30px;
         }
         &--text{
             text-align: center;
@@ -329,7 +357,10 @@
                 flex: 0 0 100%;
                 @include responsive('lg'){
                     flex: 0 0 auto;
-                    padding-bottom: 0;
+                    padding: 0 20px 0 0;
+                }
+                @include responsive('xl'){
+
                 }
             }
             &--link{
@@ -342,13 +373,33 @@
                     width: 40px;
                     height: 40px;
                 }
+                @include responsive('xl'){
+                    margin-right: 20px;
+                }
+                &:last-child{
+                    @include responsive('xl'){
+                        margin-right: 0;
+                    }
+                }
                 .iconSVG{
                     width: 30px;
                     height: 30px;
                     fill: $color-turquoise;
+                    transition: fill $time-veryfast;
                     @include responsive('lg'){
                         width: 24px;
                         height: 24px;
+                    }
+                    @include responsive('xl'){
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                &:hover{
+                    .iconSVG{
+                        @include responsive('xl'){
+                            fill: $color-yellow;
+                        }
                     }
                 }
             }

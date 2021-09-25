@@ -88,10 +88,14 @@
             .input{
                 &__field{
                     background-color: transparent;
-                    border: none;
+                    border: 1px solid transparent;
                     height: 40px;
                     padding: 0 60px 0 12px;
+                    border-radius: 5px;
                     width: 100%;
+                    &:focus{
+                        border:1px solid $color-turquoise;
+                    }
                 }
             }
             &--submit{
