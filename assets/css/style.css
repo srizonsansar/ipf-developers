@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-size: 15px;
   margin: 0;
@@ -20,9 +19,7 @@ button:focus, video:focus, a:focus, input:focus {
   outline: none; }
 
 * {
-  box-sizing: border-box; }
-
-a, label, span, ul, input, textarea, button {
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent; }
 
 button {
@@ -64,30 +61,6 @@ body.OFHidden {
   font-style: normal;
   font-display: swap; }
 
-@font-face {
-  font-family: 'ipf-icons';
-  src: url("../icon-font/ipf.eot");
-  src: url("../icon-font/ipf.eot?3ntw3t#iefix") format("embedded-opentype"), url("../icon-font/ipf.ttf?3ntw3t") format("truetype"), url("../icon-font/ipf.woff?3ntw3t") format("woff"), url("../icon-font/ipf.svg?3ntw3t#ipf-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block; }
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'ipf-icons' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-lens:before {
-  content: ""; }
-
 .header__midRow__searchNapply--link {
   background-color: rgba(159, 211, 205, 0.5);
   padding: 0 30px;
@@ -104,8 +77,25 @@ body.OFHidden {
   @media (min-width: 1200px) {
     .header__midRow__searchNapply--link:hover {
       background-color: #EEA10A;
-      color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); } }
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); } }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #BDBDBD;
+  opacity: 1;
+  /* Firefox */ }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #BDBDBD; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #BDBDBD; }
+
+.input__field {
+  color: #253347; }
 
 .header {
   position: fixed;
@@ -113,15 +103,21 @@ body.OFHidden {
   left: 0;
   width: 100%;
   z-index: 10;
-  padding: 10px 15px; }
+  padding: 10px 15px 0;
+  background-color: #ffffff; }
   .header.active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  .header.shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden; }
   .header__topBar {
     display: none; }
   .header__midRow {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding-bottom: 10px; }
     .header__midRow__searchNapply {
       display: flex;
       align-items: center; }
@@ -135,19 +131,51 @@ body.OFHidden {
             display: inline-flex; } }
       .header__midRow__searchNapply--search {
         cursor: pointer; }
-        .header__midRow__searchNapply--search .icon {
-          font-size: 20px;
-          color: #35BDB2; }
+        .header__midRow__searchNapply--search .iconSVG {
+          width: 20px;
+          height: 20px;
+          fill: #35BDB2; }
           @media (min-width: 1000px) {
-            .header__midRow__searchNapply--search .icon {
-              color: #253347; } }
-    .header__midRow__logo .iconSVG {
-      width: 105px;
+            .header__midRow__searchNapply--search .iconSVG {
+              fill: #253347; } }
+    .header__midRow__logo--img {
       height: 70px; }
       @media (min-width: 1000px) {
-        .header__midRow__logo .iconSVG {
-          width: 134px;
-          height: 89px; } }
+        .header__midRow__logo--img {
+          height: 90px; } }
+  .header__searchBar {
+    padding: 15px 0;
+    border-top: 2px solid #EDF1F4;
+    display: none; }
+    .header__searchBar--inner {
+      width: 100%;
+      max-width: 375px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .header__searchBar--inner .iconSVG {
+        width: 20px;
+        height: 20px;
+        fill: #35BDB2; }
+    .header__searchBar__fieldBox {
+      position: relative;
+      background-color: #EDF1F4;
+      border-radius: 4px;
+      margin-right: 15px;
+      width: 300px; }
+      .header__searchBar__fieldBox .input__field {
+        background-color: transparent;
+        border: none;
+        height: 40px;
+        padding: 0 60px 0 12px;
+        width: 100%; }
+      .header__searchBar__fieldBox--submit {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none; }
+        .header__searchBar__fieldBox--submit .iconSVG {
+          fill: #253347; }
 
 .header__midRow__navTrigger {
   display: flex;

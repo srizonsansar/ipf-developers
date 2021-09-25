@@ -6,6 +6,9 @@ $(document).ready(function(){
         $(this).children('.line1, .line3').toggleClass('active')
         $('.sideNav').toggleClass('active')
         $('body').toggleClass('OFHidden')
+        // Hide Search Bar in Mobile
+        $('.header__searchBar').slideUp();
+        $('.header').removeClass('shadow')
     })
 
 })
