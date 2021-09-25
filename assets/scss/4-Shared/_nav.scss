@@ -53,6 +53,7 @@
     position: fixed;
     top: 90px;
     right: -300px;
+    z-index: 5;
     width: 300px;
     height: calc(100vh - 90px);
     background-color: $color-turquoise;

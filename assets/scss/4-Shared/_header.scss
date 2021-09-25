@@ -33,6 +33,7 @@
                 display: none;
                 @include responsive('lg'){
                     display: inline-flex;
+                    margin-right: 25px;
                 }
             }
             &--search{
@@ -48,6 +49,9 @@
             }
         }
         &__logo{
+            &--link{
+                display: block;
+            }
             &--img{
                 height: 70px;
                 @include responsive('lg'){
@@ -63,6 +67,7 @@
         &--inner{
             width: 100%;
             max-width: 375px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -73,18 +78,24 @@
             }
         }
         &__fieldBox{
-            position: relative;
             background-color: $color-grey3;
             border-radius: 4px;
             margin-right: 15px;
             width: 300px;
+            &--form{
+                position: relative;
+            }
             .input{
                 &__field{
                     background-color: transparent;
-                    border: none;
+                    border: 1px solid transparent;
                     height: 40px;
                     padding: 0 60px 0 12px;
+                    border-radius: 5px;
                     width: 100%;
+                    &:focus{
+                        border:1px solid $color-turquoise;
+                    }
                 }
             }
             &--submit{
@@ -98,4 +109,9 @@
             }
         }
     }
-} 
+}
+
+// Padding on Body When Heder is Fixed
+.spaceTop{
+    padding-top: 130px;
+}

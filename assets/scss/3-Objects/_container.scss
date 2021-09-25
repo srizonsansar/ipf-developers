@@ -17,4 +17,20 @@
     @include responsive(xxl){
         max-width: 1370px;
     }
+    @include responsive(xxxl){
+        max-width: 1550px;
+    }
+}
+
+.plr{
+    // Padding Left and Right 15px
+    padding: 0 15px;
+}
+
+.row{
+    margin: 0 -15px;
+}
+
+.col{
+    padding: 0 15px;
 }
