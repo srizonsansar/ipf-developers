@@ -6,6 +6,12 @@
     z-index: 10;
     padding: 10px 15px 0;
     background-color: $color-white;
+    @include responsive('xl'){
+        padding: 15px 20px 0;
+    }
+    @include responsive('xxl'){
+        padding: 15px 30px 0;
+    }
     &.active{
         box-shadow: 0 0 10px transparentize($color-black, .85);
     }
@@ -16,6 +22,55 @@
     }
     &__topBar{
         display: none;
+        @include responsive('md'){
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            border-bottom: 2px solid transparentize($color-grey3, .3);
+            padding-bottom: 15px;
+            margin-bottom: 12px;
+        }
+        &--links{
+            color: $color-black-ipf;
+            text-decoration: none;
+            transition: color $time-veryfast;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            &:hover{
+                @include responsive('xl'){
+                    color: $color-turquoise;
+                }
+            }
+        }
+        &__login{
+            border-left: 2px solid darken($color-grey3, 5%);
+            padding-left: 15px;
+            &--link{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $color-black-ipf;
+                transition: color $time-veryfast;
+                .iconSVG{
+                    width: 20px;
+                    height: 20px;
+                    fill: $color-turquoise;
+                    margin-right: 5px;
+                    transition: fill $time-veryfast;
+                }
+                &:hover{
+                    @include responsive('xl'){
+                        color: $color-yellow;
+                    }
+                    .iconSVG{
+                        @include responsive('xl'){
+                            fill: $color-yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
     &__midRow{
         display: flex;
@@ -113,5 +168,8 @@
 
 // Padding on Body When Heder is Fixed
 .spaceTop{
-    padding-top: 130px;
+    padding-top: 90px;
+    @include responsive('md'){
+        padding-top: 140px;
+    }
 }
