@@ -292,6 +292,7 @@
                 text-decoration: none;
                 padding: 6px 0;
                 transition: color $time-veryfast;
+                line-height: 1.3;
                 &:hover{
                     @include responsive('xl'){
                         color: $color-yellow;
