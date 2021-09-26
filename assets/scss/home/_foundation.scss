@@ -19,7 +19,7 @@
         @include responsive('lg'){
             background-color: $color-grey-5;
             border-radius: 10px;
-            padding: 50px 30px;
+            padding: 50px 30px 30px;
         }
     }
     &--title{
@@ -36,9 +36,11 @@
         }
         @include responsive('xl'){
             font-size: 36px;
+            padding-bottom: 45px;
         }
         @include responsive('xxl'){
             font-size: 40px;
+            padding-bottom: 50px;
         }
         @include responsive('xxxl'){
             font-size: 48px;
@@ -61,47 +63,49 @@
             display: flex;
             flex-direction: column;
             flex: 0 0 400px;
-            padding-right: 50px;
+        }
+        @include responsive('xl'){
+            flex: 0 0 450px;
         }
         @include responsive('xxxl'){
             flex: 0 0 500px;
-            padding-right: 0;
         }
         &--list{
-            padding-bottom: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             cursor: pointer;
             @include responsive('xl'){
                 font-size: 17px;
-                margin-bottom: 17px;
-                padding-bottom: 17px;
             }
             @include responsive('xxl'){
                 font-size: 19px;
-                margin-bottom: 19px;
-                padding-bottom: 19px;
             }
             @include responsive('xxxl'){
                 font-size: 21px;
-                margin-bottom: 21px;
-                padding-bottom: 21px;
+                margin-bottom: 35px;
                 
             }
             &.active{
-                border-bottom: 2px solid $color-turquoise;
+                border-bottom: 3px solid $color-turquoise;
                 margin-bottom: 25px;
+                padding-bottom: 15px;
                 font-weight: 500;
                 order: -1;
+                font-size: 18px;
+                @include responsive('lg'){
+                    border-color: $color-turquoise4;
+                }
                 @include responsive('xl'){
                     font-size: 20px;
+                    margin-bottom: 30px;
                 }
                 @include responsive('xxl'){
                     font-size: 22px;
-                    border-width: 3px;
+                    padding-bottom: 20px;
                 }
                 @include responsive('xxxl'){
                     font-size: 24px;
                     border-width: 5px;
+                    margin-bottom: 35px;
                     
                 }
             }
@@ -112,9 +116,17 @@
         @include responsive('lg'){
             padding-left: 0;
             flex: 0 0 calc(100% - 400px);
+            margin-top: -50px;
+        }
+        @include responsive('xl'){
+            flex: 0 0 calc(100% - 450px);
+        }
+        @include responsive('xxl'){
+            margin-top: -85px;
         }
         @include responsive('xxxl'){
             flex: 0 0 calc(100% - 500px);
+            margin-top: -85px;
         }
         .slick-list{
             padding:0 15px 0 0;
@@ -148,9 +160,6 @@
                     flex-direction: row;
                     justify-content: space-between;
                 }
-                @include responsive('xxxl'){
-                    margin-top: -85px;
-                }
             }
         }
         &__photo{
@@ -162,13 +171,20 @@
             padding: 7px;
             @include responsive('lg'){
                 margin: 0 0 25px;
+                border-color: $color-turquoise4;
+            }
+            @include responsive('xxl'){
+                flex: 0 0 240px;
+                height: 240px;
+                border-width: 4px;
+                padding: 10px;
+                margin: 0;
             }
             @include responsive('xxxl'){
-                flex: 0 0 274px;
-                height: 274px;
+                flex: 0 0 275px;
+                height: 275px;
                 border-width: 5px;
                 padding: 15px;
-                margin: 0;
             }
             &--img{
                 width: 100%;
@@ -176,10 +192,13 @@
             }
         }
         &__info{
-            @include responsive('xxxl'){
+            @include responsive('xxl'){
                 width: 100%;
-                max-width: 465px;
                 padding-top: 15px;
+                max-width: 565px;
+            }
+            @include responsive('xxxl'){
+                max-width: 465px;
             }
             &--title{
                 display: flex;
@@ -227,6 +246,10 @@
             }
             &--bioTitle{
                 padding-bottom: 20px;
+                line-height: 1.4;
+                @include responsive('xl'){
+                    line-height: 1.5;
+                }
                 @include responsive('xxxl'){
                     font-size: 14px;
                     padding-bottom: 50px;
@@ -251,6 +274,9 @@
             p{
                 padding-bottom: 20px;
                 line-height: 1.4;
+                @include responsive('xl'){
+                    line-height: 1.5;
+                }
                 @include responsive('xxxl'){
                     font-size: 17px;
                     line-height: 1.5;
@@ -261,6 +287,9 @@
                 display: flex;
                 font-weight: 500;
                 font-size: 17px;
+                @include responsive('lg'){
+                    padding-top: 10px;
+                }
                 @include responsive('xxxl'){
                     padding-top: 20px;
                 }

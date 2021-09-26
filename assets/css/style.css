@@ -843,7 +843,7 @@ body.OFHidden {
       .foundation--container {
         background-color: #F5F5F5;
         border-radius: 10px;
-        padding: 50px 30px; } }
+        padding: 50px 30px 30px; } }
   .foundation--title {
     text-align: center;
     font-weight: 600;
@@ -858,10 +858,12 @@ body.OFHidden {
         margin: 0 auto; } }
     @media (min-width: 1200px) {
       .foundation--title {
-        font-size: 36px; } }
+        font-size: 36px;
+        padding-bottom: 45px; } }
     @media (min-width: 1400px) {
       .foundation--title {
-        font-size: 40px; } }
+        font-size: 40px;
+        padding-bottom: 50px; } }
     @media (min-width: 1580px) {
       .foundation--title {
         font-size: 48px;
@@ -880,56 +882,66 @@ body.OFHidden {
       .foundation__nav {
         display: flex;
         flex-direction: column;
-        flex: 0 0 400px;
-        padding-right: 50px; } }
+        flex: 0 0 400px; } }
+    @media (min-width: 1200px) {
+      .foundation__nav {
+        flex: 0 0 450px; } }
     @media (min-width: 1580px) {
       .foundation__nav {
-        flex: 0 0 500px;
-        padding-right: 0; } }
+        flex: 0 0 500px; } }
     .foundation__nav--list {
-      padding-bottom: 15px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
       cursor: pointer; }
       @media (min-width: 1200px) {
         .foundation__nav--list {
-          font-size: 17px;
-          margin-bottom: 17px;
-          padding-bottom: 17px; } }
+          font-size: 17px; } }
       @media (min-width: 1400px) {
         .foundation__nav--list {
-          font-size: 19px;
-          margin-bottom: 19px;
-          padding-bottom: 19px; } }
+          font-size: 19px; } }
       @media (min-width: 1580px) {
         .foundation__nav--list {
           font-size: 21px;
-          margin-bottom: 21px;
-          padding-bottom: 21px; } }
+          margin-bottom: 35px; } }
       .foundation__nav--list.active {
-        border-bottom: 2px solid #35BDB2;
+        border-bottom: 3px solid #35BDB2;
         margin-bottom: 25px;
+        padding-bottom: 15px;
         font-weight: 500;
-        order: -1; }
+        order: -1;
+        font-size: 18px; }
+        @media (min-width: 1000px) {
+          .foundation__nav--list.active {
+            border-color: #8FD2CA; } }
         @media (min-width: 1200px) {
           .foundation__nav--list.active {
-            font-size: 20px; } }
+            font-size: 20px;
+            margin-bottom: 30px; } }
         @media (min-width: 1400px) {
           .foundation__nav--list.active {
             font-size: 22px;
-            border-width: 3px; } }
+            padding-bottom: 20px; } }
         @media (min-width: 1580px) {
           .foundation__nav--list.active {
             font-size: 24px;
-            border-width: 5px; } }
+            border-width: 5px;
+            margin-bottom: 35px; } }
   .foundation__slides {
     padding-left: 15px; }
     @media (min-width: 1000px) {
       .foundation__slides {
         padding-left: 0;
-        flex: 0 0 calc(100% - 400px); } }
+        flex: 0 0 calc(100% - 400px);
+        margin-top: -50px; } }
+    @media (min-width: 1200px) {
+      .foundation__slides {
+        flex: 0 0 calc(100% - 450px); } }
+    @media (min-width: 1400px) {
+      .foundation__slides {
+        margin-top: -85px; } }
     @media (min-width: 1580px) {
       .foundation__slides {
-        flex: 0 0 calc(100% - 500px); } }
+        flex: 0 0 calc(100% - 500px);
+        margin-top: -85px; } }
     .foundation__slides .slick-list {
       padding: 0 15px 0 0; }
       @media (min-width: 400px) {
@@ -958,9 +970,6 @@ body.OFHidden {
           .foundation__slides--item.active {
             flex-direction: row;
             justify-content: space-between; } }
-        @media (min-width: 1580px) {
-          .foundation__slides--item.active {
-            margin-top: -85px; } }
     .foundation__slides__photo {
       border: 3px solid #35BDB2;
       border-radius: 50%;
@@ -970,22 +979,32 @@ body.OFHidden {
       padding: 7px; }
       @media (min-width: 1000px) {
         .foundation__slides__photo {
-          margin: 0 0 25px; } }
+          margin: 0 0 25px;
+          border-color: #8FD2CA; } }
+      @media (min-width: 1400px) {
+        .foundation__slides__photo {
+          flex: 0 0 240px;
+          height: 240px;
+          border-width: 4px;
+          padding: 10px;
+          margin: 0; } }
       @media (min-width: 1580px) {
         .foundation__slides__photo {
-          flex: 0 0 274px;
-          height: 274px;
+          flex: 0 0 275px;
+          height: 275px;
           border-width: 5px;
-          padding: 15px;
-          margin: 0; } }
+          padding: 15px; } }
       .foundation__slides__photo--img {
         width: 100%;
         border-radius: 50%; }
-    @media (min-width: 1580px) {
+    @media (min-width: 1400px) {
       .foundation__slides__info {
         width: 100%;
-        max-width: 465px;
-        padding-top: 15px; } }
+        padding-top: 15px;
+        max-width: 565px; } }
+    @media (min-width: 1580px) {
+      .foundation__slides__info {
+        max-width: 465px; } }
     .foundation__slides__info--title {
       display: flex;
       text-align: center;
@@ -1027,7 +1046,11 @@ body.OFHidden {
           font-size: 48px;
           padding-bottom: 30px; } }
     .foundation__slides__info--bioTitle {
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      line-height: 1.4; }
+      @media (min-width: 1200px) {
+        .foundation__slides__info--bioTitle {
+          line-height: 1.5; } }
       @media (min-width: 1580px) {
         .foundation__slides__info--bioTitle {
           font-size: 14px;
@@ -1048,6 +1071,9 @@ body.OFHidden {
     .foundation__slides__info p {
       padding-bottom: 20px;
       line-height: 1.4; }
+      @media (min-width: 1200px) {
+        .foundation__slides__info p {
+          line-height: 1.5; } }
       @media (min-width: 1580px) {
         .foundation__slides__info p {
           font-size: 17px;
@@ -1057,6 +1083,9 @@ body.OFHidden {
       display: flex;
       font-weight: 500;
       font-size: 17px; }
+      @media (min-width: 1000px) {
+        .foundation__slides__info__btn {
+          padding-top: 10px; } }
       @media (min-width: 1580px) {
         .foundation__slides__info__btn {
           padding-top: 20px; } }
