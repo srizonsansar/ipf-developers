@@ -1,9 +1,26 @@
 .foundation{
     background-color: $color-grey-5;
     padding: 50px 0;
+    margin-bottom: 50px;
+    @include responsive('md'){
+        margin-bottom: 80px;
+    }
+    @include responsive('lg'){
+        background-color: transparent;
+        padding: 0 15px;
+        margin-bottom: 100px
+    }
+    @include responsive('xl'){
+        margin-bottom: 120px
+    }
     &--container{
         @extend %container;
         max-width: 1600px;
+        @include responsive('lg'){
+            background-color: $color-grey-5;
+            border-radius: 10px;
+            padding: 50px 30px;
+        }
     }
     &--title{
         text-align: center;
@@ -11,14 +28,99 @@
         font-size: 30px;
         padding-bottom: 40px;
         letter-spacing: -1px;
+        @include responsive('lg'){
+            width: 100%;
+            max-width: 1300px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        @include responsive('xl'){
+            font-size: 36px;
+        }
+        @include responsive('xxl'){
+            font-size: 40px;
+        }
+        @include responsive('xxxl'){
+            font-size: 48px;
+            padding-bottom: 55px;
+        }
+    }
+    &--info{
+        @include responsive('lg'){
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
     &__nav{
         display: none;
+        @include responsive('lg'){
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 400px;
+            padding-right: 50px;
+        }
+        @include responsive('xxxl'){
+            flex: 0 0 500px;
+            padding-right: 0;
+        }
+        &--list{
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            @include responsive('xl'){
+                font-size: 17px;
+                margin-bottom: 17px;
+                padding-bottom: 17px;
+            }
+            @include responsive('xxl'){
+                font-size: 19px;
+                margin-bottom: 19px;
+                padding-bottom: 19px;
+            }
+            @include responsive('xxxl'){
+                font-size: 21px;
+                margin-bottom: 21px;
+                padding-bottom: 21px;
+                
+            }
+            &.active{
+                border-bottom: 2px solid $color-turquoise;
+                margin-bottom: 25px;
+                font-weight: 500;
+                order: -1;
+                @include responsive('xl'){
+                    font-size: 20px;
+                }
+                @include responsive('xxl'){
+                    font-size: 22px;
+                    border-width: 3px;
+                }
+                @include responsive('xxxl'){
+                    font-size: 24px;
+                    border-width: 5px;
+                    
+                }
+            }
+        }
     }
     &__slides{
         padding-left: 15px;
+        @include responsive('lg'){
+            padding-left: 0;
+            flex: 0 0 calc(100% - 400px);
+        }
+        @include responsive('xxxl'){
+            flex: 0 0 calc(100% - 500px);
+        }
         .slick-list{
             padding:0 15px 0 0;
+            @include responsive('xs'){
+                padding-right: 20px;
+            }
         }
         .slick-track{
             display: flex;
@@ -34,21 +136,51 @@
             background-color: $color-white;
             padding: 50px 30px;
             border-radius: 20px;
+            @include responsive('lg'){
+                background-color: transparent;
+                padding: 0;
+                display: none;
+            }
+            &.active{
+                display: flex;
+                flex-direction: column;
+                @include responsive('xxl'){
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                @include responsive('xxxl'){
+                    margin-top: -85px;
+                }
+            }
         }
         &__photo{
             border: 3px solid $color-turquoise;
             border-radius: 50%;
             width: 166px;
             height: 166px;
-            margin: 0 auto;
+            margin: 0 auto 25px;
             padding: 7px;
-            margin-bottom: 25px;
+            @include responsive('lg'){
+                margin: 0 0 25px;
+            }
+            @include responsive('xxxl'){
+                flex: 0 0 274px;
+                height: 274px;
+                border-width: 5px;
+                padding: 15px;
+                margin: 0;
+            }
             &--img{
                 width: 100%;
                 border-radius: 50%;
             }
         }
         &__info{
+            @include responsive('xxxl'){
+                width: 100%;
+                max-width: 465px;
+                padding-top: 15px;
+            }
             &--title{
                 display: flex;
                 text-align: center;
@@ -57,6 +189,9 @@
                 font-weight: 700;
                 padding-bottom: 20px;
                 letter-spacing: -.5px;
+                @include responsive('lg'){
+                    display: none;
+                }
                 .text{
                     position: relative;
                     padding-bottom: 12px;
@@ -77,26 +212,64 @@
                 font-weight: 500;
                 font-size: 30px;
                 padding-bottom: 15px;
+                @include responsive('xl'){
+                    font-size: 42px;
+                    padding-bottom: 20px;
+                }
+                @include responsive('xxl'){
+                    font-size: 45px;
+                    padding-bottom: 25px;
+                }
+                @include responsive('xxxl'){
+                    font-size: 48px;
+                    padding-bottom: 30px;
+                }
             }
             &--bioTitle{
+                padding-bottom: 20px;
+                @include responsive('xxxl'){
+                    font-size: 14px;
+                    padding-bottom: 50px;
+                }
                 .block{
                     font-weight: 600;
+                    @include responsive('lg'){
+                        display: block;
+                    }
+                    @include responsive('xxxl'){
+                        font-size: 21px;
+                        font-weight: 400;
+                        padding-bottom: 5px;
+                    }
+                    .showMob{
+                        @include responsive('lg'){
+                            display: none;
+                        }
+                    }
                 }
             }
             p{
                 padding-bottom: 20px;
                 line-height: 1.4;
+                @include responsive('xxxl'){
+                    font-size: 17px;
+                    line-height: 1.5;
+                    padding-bottom: 30px;
+                }
             }
             &__btn{
                 display: flex;
-                align-items: center;
+                font-weight: 500;
+                font-size: 17px;
+                @include responsive('xxxl'){
+                    padding-top: 20px;
+                }
                 &--link{
                     text-decoration: none;
                     color: $color-black-ipf;
-                    font-weight: 500;
-                    font-size: 17px;
                     display: flex;
                     align-items: center;
+                    transition: color $time-veryfast;
                     &:after{
                         content: "";
                         width: 35px;
