@@ -1,0 +1,357 @@
+.foundation{
+    background-color: $color-grey-5;
+    padding: 50px 0;
+    margin-bottom: 50px;
+    @include responsive('md'){
+        margin-bottom: 80px;
+    }
+    @include responsive('lg'){
+        background-color: transparent;
+        padding: 0 15px;
+        margin-bottom: 100px
+    }
+    @include responsive('xl'){
+        margin-bottom: 120px
+    }
+    &--container{
+        @extend %container;
+        max-width: 1600px;
+        @include responsive('lg'){
+            background-color: $color-grey-5;
+            border-radius: 10px;
+            padding: 50px 30px 30px;
+        }
+    }
+    &--title{
+        text-align: center;
+        font-weight: 600;
+        font-size: 30px;
+        padding-bottom: 40px;
+        letter-spacing: -1px;
+        @include responsive('lg'){
+            width: 100%;
+            max-width: 1300px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        @include responsive('xl'){
+            font-size: 36px;
+            padding-bottom: 45px;
+        }
+        @include responsive('xxl'){
+            font-size: 40px;
+            padding-bottom: 50px;
+        }
+        @include responsive('xxxl'){
+            font-size: 48px;
+            padding-bottom: 55px;
+        }
+    }
+    &--info{
+        @include responsive('lg'){
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    &__nav{
+        display: none;
+        @include responsive('lg'){
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 400px;
+        }
+        @include responsive('xl'){
+            flex: 0 0 450px;
+        }
+        @include responsive('xxxl'){
+            flex: 0 0 500px;
+        }
+        &--list{
+            margin-bottom: 30px;
+            cursor: pointer;
+            @include responsive('xl'){
+                font-size: 17px;
+            }
+            @include responsive('xxl'){
+                font-size: 19px;
+            }
+            @include responsive('xxxl'){
+                font-size: 21px;
+                margin-bottom: 35px;
+                
+            }
+            &.active{
+                border-bottom: 3px solid $color-turquoise;
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+                font-weight: 500;
+                order: -1;
+                font-size: 18px;
+                @include responsive('lg'){
+                    border-color: $color-turquoise4;
+                }
+                @include responsive('xl'){
+                    font-size: 20px;
+                    margin-bottom: 30px;
+                }
+                @include responsive('xxl'){
+                    font-size: 22px;
+                    padding-bottom: 20px;
+                }
+                @include responsive('xxxl'){
+                    font-size: 24px;
+                    border-width: 5px;
+                    margin-bottom: 35px;
+                    
+                }
+            }
+        }
+    }
+    &__slides{
+        padding-left: 15px;
+        @include responsive('lg'){
+            padding-left: 0;
+            flex: 0 0 calc(100% - 400px);
+            margin-top: -50px;
+        }
+        @include responsive('xl'){
+            flex: 0 0 calc(100% - 450px);
+        }
+        @include responsive('xxl'){
+            margin-top: -85px;
+        }
+        @include responsive('xxxl'){
+            flex: 0 0 calc(100% - 500px);
+            margin-top: -85px;
+        }
+        .slick-list{
+            padding:0 15px 0 0;
+            @include responsive('xs'){
+                padding-right: 20px;
+            }
+        }
+        .slick-track{
+            display: flex;
+            align-items: center;
+        }
+        .slick-slide{
+            margin: 0 5px;
+            > div{
+                display: flex;
+            }
+        }
+        &--item{
+            background-color: $color-white;
+            padding: 50px 30px;
+            border-radius: 20px;
+            @include responsive('lg'){
+                background-color: transparent;
+                padding: 0;
+                display: none;
+            }
+            &.active{
+                display: flex;
+                flex-direction: column;
+                @include responsive('xxl'){
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+        }
+        &__photo{
+            border: 3px solid $color-turquoise;
+            border-radius: 50%;
+            width: 166px;
+            height: 166px;
+            margin: 0 auto 25px;
+            padding: 7px;
+            @include responsive('lg'){
+                margin: 0 0 25px;
+                border-color: $color-turquoise4;
+            }
+            @include responsive('xxl'){
+                flex: 0 0 240px;
+                height: 240px;
+                border-width: 4px;
+                padding: 10px;
+                margin: 0;
+            }
+            @include responsive('xxxl'){
+                flex: 0 0 275px;
+                height: 275px;
+                border-width: 5px;
+                padding: 15px;
+            }
+            &--img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        &__info{
+            @include responsive('xxl'){
+                width: 100%;
+                padding-top: 15px;
+                max-width: 565px;
+            }
+            @include responsive('xxxl'){
+                max-width: 465px;
+            }
+            &--title{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 700;
+                padding-bottom: 20px;
+                letter-spacing: -.5px;
+                @include responsive('lg'){
+                    display: none;
+                }
+                .text{
+                    position: relative;
+                    padding-bottom: 12px;
+                    &:before{
+                        content: "";
+                        position: absolute; 
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        background-color: $color-turquoise;
+                    }
+                }
+            }
+            &--subTitle{
+                font-weight: 500;
+                font-size: 30px;
+                padding-bottom: 15px;
+                @include responsive('xl'){
+                    font-size: 42px;
+                    padding-bottom: 20px;
+                }
+                @include responsive('xxl'){
+                    font-size: 45px;
+                    padding-bottom: 25px;
+                }
+                @include responsive('xxxl'){
+                    font-size: 48px;
+                    padding-bottom: 30px;
+                }
+            }
+            &--bioTitle{
+                padding-bottom: 20px;
+                line-height: 1.4;
+                @include responsive('xl'){
+                    line-height: 1.5;
+                }
+                @include responsive('xxxl'){
+                    font-size: 14px;
+                    padding-bottom: 50px;
+                }
+                .block{
+                    font-weight: 600;
+                    @include responsive('lg'){
+                        display: block;
+                    }
+                    @include responsive('xxxl'){
+                        font-size: 21px;
+                        font-weight: 400;
+                        padding-bottom: 5px;
+                    }
+                    .showMob{
+                        @include responsive('lg'){
+                            display: none;
+                        }
+                    }
+                }
+            }
+            p{
+                padding-bottom: 20px;
+                line-height: 1.4;
+                @include responsive('xl'){
+                    line-height: 1.5;
+                }
+                @include responsive('xxxl'){
+                    font-size: 17px;
+                    line-height: 1.5;
+                    padding-bottom: 30px;
+                }
+            }
+            &__btn{
+                display: flex;
+                font-weight: 500;
+                font-size: 17px;
+                @include responsive('lg'){
+                    padding-top: 10px;
+                }
+                @include responsive('xxxl'){
+                    padding-top: 20px;
+                }
+                &--link{
+                    text-decoration: none;
+                    color: $color-black-ipf;
+                    display: flex;
+                    align-items: center;
+                    transition: color $time-veryfast;
+                    &:after{
+                        content: "";
+                        width: 35px;
+                        height: 16px;
+                        background-image: url('../images/arrow-right-black.png');
+                        background-size: 35px 16px;
+                        margin-left: 15px;
+                        transition: margin-left $time-veryfast;
+                    }
+                    &:hover{
+                        @include responsive('xl'){
+                            color: $color-turquoise;
+                        }
+                        &:after{
+                            @include responsive('xl'){
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slick-dots{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 21px;
+                height: 15px;
+                padding: 0 3px;
+                button{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: none;
+                    padding: 0;
+                    background-color: $color-black-mid;
+                    display: block;
+                    text-indent: -9999px;
+                    transition:  width $time-veryfast, height $time-veryfast;
+                }
+                &.slick-active{
+                    button{
+                        background-color: $color-turquoise;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
