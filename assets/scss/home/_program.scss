@@ -1,0 +1,54 @@
+.program{
+    background-color: transparentize($color-grey6, .5);
+    background-image: url('../images/ipf-logo-trans.png');
+    background-size: cover;
+    background-position: center top;
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    &--container{
+        padding: 0 18px;
+    }
+    &__textBlock{
+        padding: 0 17px 80px;
+        &--title{
+            font-size: 48px;
+            font-weight: 700;
+            color: $color-turquoise;
+            letter-spacing: -2px;
+            padding-bottom: 20px;
+            line-height: 1;
+        }
+        &--text{
+            line-height: 1.4;
+            max-width: 240px;
+            color: $color-grey-body;
+        }
+        &__btn{
+            padding-top: 15px;
+            &--link{
+                @extend %button-arrow-trans;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &--item{
+            background-color: $color-white;
+            flex: 0 0 calc(50% - 8px);
+            border-radius: 6px 6px 0 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        &--infoBlock{
+            padding: 15px;
+        }
+        &--img{
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

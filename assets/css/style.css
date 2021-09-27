@@ -76,37 +76,65 @@ body.OFHidden {
   @media (min-width: 1200px) {
     .header__midRow__searchNapply--link:hover, .footer__blockContact__login--link:hover {
       background-color: #EEA10A;
-      color: #ffffff; } }
+      color: #FFFFFF; } }
 
 .welcomeHome__textBlock__btn--link {
-  background-color: #3db6b3;
+  background-color: #3DB6B3;
   display: inline-flex;
   align-items: center;
   border-radius: 5px;
   height: 50px;
-  padding: 0 30px;
-  color: #ffffff;
+  padding: 0 25px;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 17px;
+  font-weight: 400;
   transition: background-color 0.3s; }
-  .welcomeHome__textBlock__btn--link .arrow {
-    width: 30px;
+  .welcomeHome__textBlock__btn--link:after {
+    content: "";
+    width: 35px;
+    height: 16px;
+    background-image: url("../images/arrow-right.png");
+    background-size: 35px 16px;
     margin-left: 15px;
     transition: transform 0.3s; }
   @media (min-width: 1000px) {
     .welcomeHome__textBlock__btn--link {
       height: 60px;
-      padding: 0 40px; } }
+      padding: 0 30px; } }
   @media (min-width: 1400px) {
     .welcomeHome__textBlock__btn--link {
       height: 70px;
-      padding: 0 50px; } }
+      padding: 0 40px; } }
   @media (min-width: 1200px) {
     .welcomeHome__textBlock__btn--link:hover {
       background-color: #EEA10A; } }
   @media (min-width: 1200px) {
-    .welcomeHome__textBlock__btn--link:hover .arrow {
+    .welcomeHome__textBlock__btn--link:hover:after {
       transform: translateX(5px); } }
+
+.program__textBlock__btn--link, .foundation__slides__info__btn--link {
+  text-decoration: none;
+  color: #253347;
+  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  align-items: center; }
+  .program__textBlock__btn--link:after, .foundation__slides__info__btn--link:after {
+    content: "";
+    width: 35px;
+    height: 16px;
+    background-image: url("../images/arrow-right-black.png");
+    background-size: 35px 16px;
+    margin-left: 15px;
+    transition: margin-left 0.3s; }
+  @media (min-width: 1200px) {
+    .program__textBlock__btn--link:hover, .foundation__slides__info__btn--link:hover {
+      color: #35BDB2; } }
+  @media (min-width: 1200px) {
+    .program__textBlock__btn--link:hover:after, .foundation__slides__info__btn--link:hover:after {
+      margin-left: 20px; } }
 
 .footer--container, .welcomeHome--container, .foundation--container {
   width: 100%;
@@ -164,7 +192,7 @@ body.OFHidden {
   width: 100%;
   z-index: 10;
   padding: 10px 15px 0;
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
   @media (min-width: 1200px) {
     .header {
       padding: 15px 20px 0; } }
@@ -401,7 +429,7 @@ body.OFHidden {
       .footer__blockContact__login {
         align-items: flex-start; } }
     .footer__blockContact__login--link {
-      background-color: #91d2cb;
+      background-color: #91D2Cb;
       height: 40px;
       font-size: 15px;
       color: #253347;
@@ -822,6 +850,48 @@ body.OFHidden {
         height: 755px;
         border-radius: 15px; } }
 
+.program {
+  background-color: rgba(248, 248, 248, 0.5);
+  background-image: url("../images/ipf-logo-trans.png");
+  background-size: cover;
+  background-position: center top;
+  background-size: 75% auto;
+  background-repeat: no-repeat;
+  padding: 80px 0; }
+  .program--container {
+    padding: 0 18px; }
+  .program__textBlock {
+    padding: 0 17px 80px; }
+    .program__textBlock--title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #35BDB2;
+      letter-spacing: -2px;
+      padding-bottom: 20px;
+      line-height: 1; }
+    .program__textBlock--text {
+      line-height: 1.4;
+      max-width: 240px;
+      color: #454b66; }
+    .program__textBlock__btn {
+      padding-top: 15px; }
+  .program__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .program__list--item {
+      background-color: #FFFFFF;
+      flex: 0 0 calc(50% - 8px);
+      border-radius: 6px 6px 0 0;
+      overflow: hidden;
+      margin-bottom: 15px; }
+    .program__list--infoBlock {
+      padding: 15px; }
+    .program__list--img {
+      height: 100px;
+      background-size: cover;
+      background-position: center; }
+
 .foundation {
   background-color: #F5F5F5;
   padding: 50px 0;
@@ -891,7 +961,8 @@ body.OFHidden {
         flex: 0 0 500px; } }
     .foundation__nav--list {
       margin-bottom: 30px;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: color 0.3s; }
       @media (min-width: 1200px) {
         .foundation__nav--list {
           font-size: 17px; } }
@@ -902,6 +973,9 @@ body.OFHidden {
         .foundation__nav--list {
           font-size: 21px;
           margin-bottom: 35px; } }
+      @media (min-width: 1200px) {
+        .foundation__nav--list:hover {
+          color: #35BDB2; } }
       .foundation__nav--list.active {
         border-bottom: 3px solid #35BDB2;
         margin-bottom: 25px;
@@ -955,7 +1029,7 @@ body.OFHidden {
       .foundation__slides .slick-slide > div {
         display: flex; }
     .foundation__slides--item {
-      background-color: #ffffff;
+      background-color: #FFFFFF;
       padding: 50px 30px;
       border-radius: 20px; }
       @media (min-width: 1000px) {
@@ -1080,35 +1154,13 @@ body.OFHidden {
           line-height: 1.5;
           padding-bottom: 30px; } }
     .foundation__slides__info__btn {
-      display: flex;
-      font-weight: 500;
-      font-size: 17px; }
+      display: flex; }
       @media (min-width: 1000px) {
         .foundation__slides__info__btn {
           padding-top: 10px; } }
       @media (min-width: 1580px) {
         .foundation__slides__info__btn {
           padding-top: 20px; } }
-      .foundation__slides__info__btn--link {
-        text-decoration: none;
-        color: #253347;
-        display: flex;
-        align-items: center;
-        transition: color 0.3s; }
-        .foundation__slides__info__btn--link:after {
-          content: "";
-          width: 35px;
-          height: 16px;
-          background-image: url("../images/arrow-right-black.png");
-          background-size: 35px 16px;
-          margin-left: 15px;
-          transition: margin-left 0.3s; }
-        @media (min-width: 1200px) {
-          .foundation__slides__info__btn--link:hover {
-            color: #35BDB2; } }
-        @media (min-width: 1200px) {
-          .foundation__slides__info__btn--link:hover:after {
-            margin-left: 20px; } }
     .foundation__slides .slick-dots {
       display: flex;
       justify-content: center;
