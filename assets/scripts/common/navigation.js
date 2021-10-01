@@ -32,7 +32,7 @@ $(document).ready(function(){
     $('.navigation__mainNav__nav--item.open-level2menu').on('click', function(){
         var targetMenu = $(this).data('menu')
         $(this).parents('.navigation__mainNav--navBlock').hide()
-        $('.navigation__mainNav--navBlock.' + targetMenu).show()
+        $('.navigation__mainNav--navBlock.' + targetMenu).fadeIn()
     })
 
     // Go to Level 3
@@ -40,20 +40,20 @@ $(document).ready(function(){
         var targetMenu = $(this).data('menu')
         var parentMenu = $(this).data('parent')
         $('.navigation__mainNav--navBlock.' + parentMenu).hide()
-        $('.navigation__mainNav--navBlock.'+ targetMenu).show()
+        $('.navigation__mainNav--navBlock.'+ targetMenu).fadeIn()
     })
 
     // Back to Level 1
     $('.navigation__mainNav__nav--item.level2parent').on('click', function(){
         $(this).parents('.navigation__mainNav--navBlock.level2menu').hide()
-        $('.navigation__mainNav--navBlock.level1Menu').show()
+        $('.navigation__mainNav--navBlock.level1Menu').fadeIn()
     })
 
     // Back to Level 2
     $('.navigation__mainNav__nav--item.level3parent').on('click', function(){
         var currentMenu = $(this).data('menu')
         var parentMenu = $(this).data('parent')
-        $('.navigation__mainNav--navBlock.' + parentMenu).show()
+        $('.navigation__mainNav--navBlock.' + parentMenu).fadeIn()
         $('.navigation__mainNav--navBlock.' + currentMenu).hide()
     })
 
