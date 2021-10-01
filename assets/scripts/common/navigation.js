@@ -59,4 +59,13 @@ $(document).ready(function(){
         $('.navigation__mainNav--navBlock.' + currentMenu).hide()
     })
 
+    // Desktop Nav
+    $('.menuRow--item').on('click', function(){
+        $(this).toggleClass('active')
+        $(this).siblings().removeClass('active')
+        $('.desktop-nav').addClass('visible')
+        $('body').addClass('OFHidden')
+        $('.header__searchBar').slideDown()
+    })
+
 })

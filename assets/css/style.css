@@ -259,6 +259,9 @@ body.OFHidden {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px; }
+    @media (min-width: 1200px) {
+      .header__midRow {
+        padding-bottom: 0; } }
     .header__midRow__searchNapply {
       display: flex;
       align-items: center; }
@@ -276,10 +279,17 @@ body.OFHidden {
         .header__midRow__searchNapply--search .iconSVG {
           width: 20px;
           height: 20px;
-          fill: #35BDB2; }
+          fill: #35BDB2;
+          transition: fill 0.3s; }
           @media (min-width: 1200px) {
             .header__midRow__searchNapply--search .iconSVG {
               fill: #253347; } }
+          @media (min-width: 1200px) {
+            .header__midRow__searchNapply--search .iconSVG:hover {
+              fill: #35BDB2; } }
+    @media (min-width: 1200px) {
+      .header__midRow__logo {
+        padding-bottom: 10px; } }
     .header__midRow__logo--link {
       display: block; }
     .header__midRow__logo--img {
@@ -312,16 +322,38 @@ body.OFHidden {
           border-top: 2px solid #BDC3C7;
           max-width: none;
           margin: 0;
-          padding: 15px 0; } }
+          padding: 15px 0;
+          justify-content: space-between; } }
       .header__searchBar--inner .iconSVG {
         width: 20px;
         height: 20px;
-        fill: #35BDB2; }
+        fill: #35BDB2;
+        transition: transform 0.5s, fill 0.3s; }
+        @media (min-width: 1200px) {
+          .header__searchBar--inner .iconSVG {
+            fill: #253347;
+            cursor: pointer; } }
+        @media (min-width: 1200px) {
+          .header__searchBar--inner .iconSVG.hide-search-mobile:hover {
+            transform: rotate(90deg);
+            fill: #35BDB2; } }
+    .header__searchBar__logo {
+      display: none; }
+      @media (min-width: 1000px) {
+        .header__searchBar__logo {
+          display: block; } }
+      .header__searchBar__logo--img {
+        height: 95px; }
     .header__searchBar__fieldBox {
       background-color: #EDF1F4;
       border-radius: 4px;
       margin-right: 15px;
       width: 300px; }
+      @media (min-width: 1200px) {
+        .header__searchBar__fieldBox {
+          margin-right: 0;
+          width: 100%;
+          max-width: 425px; } }
       .header__searchBar__fieldBox--form {
         position: relative; }
       .header__searchBar__fieldBox .input__field {
@@ -331,15 +363,28 @@ body.OFHidden {
         padding: 0 60px 0 12px;
         border-radius: 5px;
         width: 100%; }
+        @media (min-width: 1200px) {
+          .header__searchBar__fieldBox .input__field {
+            height: 55px; } }
         .header__searchBar__fieldBox .input__field:focus {
           border: 1px solid #35BDB2; }
       .header__searchBar__fieldBox--submit {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        border: none; }
+        top: 0;
+        right: 0;
+        border: none;
+        height: 100%;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background-color: transparent; }
         .header__searchBar__fieldBox--submit .iconSVG {
           fill: #253347; }
+        @media (min-width: 1200px) {
+          .header__searchBar__fieldBox--submit:hover .iconSVG {
+            fill: #35BDB2; } }
 
 .spaceTop {
   padding-top: 130px; }
@@ -920,6 +965,48 @@ body.OFHidden {
         color: #FFFFFF;
         text-decoration: none;
         padding: 0 10px; }
+
+.menuRow {
+  display: none; }
+  @media (min-width: 1200px) {
+    .menuRow {
+      display: flex; } }
+  .menuRow--item {
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent; }
+    .menuRow--item:not(:last-child) {
+      margin-right: 25px; }
+      @media (min-width: 1400px) {
+        .menuRow--item:not(:last-child) {
+          margin-right: 35px; } }
+      @media (min-width: 1580px) {
+        .menuRow--item:not(:last-child) {
+          margin-right: 45px; } }
+    .menuRow--item.active {
+      color: #35BDB2;
+      border-color: #35BDB2; }
+
+.desktop-nav {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding-top: 200px; }
+  .desktop-nav.visible {
+    display: block; }
+  .desktop-nav--container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto; }
 
 .welcomeHome {
   padding: 0 35px; }
