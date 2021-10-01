@@ -9,7 +9,7 @@ $(document).ready(function(){
         // Hide Search Bar in Mobile
         $('.header__searchBar').slideUp();
         $('.header').removeClass('shadow')
-        $('.navigation__mainNav').addClass('active')
+        $('.navigation__mainNav').toggleClass('active')
     })
 
     // Close Menu on Overlay Click
@@ -26,6 +26,35 @@ $(document).ready(function(){
     // Disable Parent Div click function in Nav Div
     $('.navigation__mainNav').on('click', function(e) {
         e.stopPropagation();
-     });
+    });
+
+    // Go to Level 2
+    $('.navigation__mainNav__nav--item.open-level2menu').on('click', function(){
+        var targetMenu = $(this).data('menu')
+        $(this).parents('.navigation__mainNav--navBlock').hide()
+        $('.navigation__mainNav--navBlock.' + targetMenu).fadeIn()
+    })
+
+    // Go to Level 3
+    $('.navigation__mainNav__nav--item.open-level3menu').on('click', function(){
+        var targetMenu = $(this).data('menu')
+        var parentMenu = $(this).data('parent')
+        $('.navigation__mainNav--navBlock.' + parentMenu).hide()
+        $('.navigation__mainNav--navBlock.'+ targetMenu).fadeIn()
+    })
+
+    // Back to Level 1
+    $('.navigation__mainNav__nav--item.level2parent').on('click', function(){
+        $(this).parents('.navigation__mainNav--navBlock.level2menu').hide()
+        $('.navigation__mainNav--navBlock.level1Menu').fadeIn()
+    })
+
+    // Back to Level 2
+    $('.navigation__mainNav__nav--item.level3parent').on('click', function(){
+        var currentMenu = $(this).data('menu')
+        var parentMenu = $(this).data('parent')
+        $('.navigation__mainNav--navBlock.' + parentMenu).fadeIn()
+        $('.navigation__mainNav--navBlock.' + currentMenu).hide()
+    })
 
 })
