@@ -76,11 +76,9 @@
             right: 0;
         }
         &--navBlock{
-            &.level2menu{
+            &.level2menu, &.level3Menu{
                 display: none;
-            }
-            &.level3Menu{
-                display: none;
+                margin-bottom: 30px;
             }
         }
         &__nav{
@@ -185,6 +183,37 @@
                     height: 28px;
                     fill: $color-white;
                 }
+            }
+        }
+        &__newsBlock{
+            width: 100%;
+            max-width: 260px;
+            margin: 0 auto 30px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: $color-white;
+            display: none;
+            &--link{
+                display: block;
+                text-decoration: none;
+            }
+            &--pic{
+                height: 120px;
+                border-radius: 10px 10px 0 0;
+                background-size: cover;
+                background-position: center;
+                margin-bottom: 25px;
+            }
+            &--title{
+                font-size: 17px;
+                font-weight: 600;
+                padding: 0 10px 10px 10px;
+                color: $color-black-ipf;
+            }
+            &--text{
+                line-height: 1.5;
+                padding: 0 10px 10px 10px;
+                color: $color-black-ipf;
             }
         }
         &--links{

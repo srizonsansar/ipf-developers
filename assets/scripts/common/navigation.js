@@ -33,6 +33,7 @@ $(document).ready(function(){
         var targetMenu = $(this).data('menu')
         $(this).parents('.navigation__mainNav--navBlock').hide()
         $('.navigation__mainNav--navBlock.' + targetMenu).fadeIn()
+        $('.navigation__mainNav__newsBlock').fadeIn()
     })
 
     // Go to Level 3
@@ -47,6 +48,7 @@ $(document).ready(function(){
     $('.navigation__mainNav__nav--item.level2parent').on('click', function(){
         $(this).parents('.navigation__mainNav--navBlock.level2menu').hide()
         $('.navigation__mainNav--navBlock.level1Menu').fadeIn()
+        $('.navigation__mainNav__newsBlock').hide()
     })
 
     // Back to Level 2
