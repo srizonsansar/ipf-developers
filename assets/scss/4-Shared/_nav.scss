@@ -7,7 +7,7 @@
             justify-content: space-between;
             width: 22px;
             height: 19px;
-            @include responsive('lg'){
+            @include responsive('xl'){
                 display: none;
             }
             .line{
@@ -59,6 +59,9 @@
     padding-top: 90px;
     background-color: transparentize($color-white, .2);
     display: none;
+    @include responsive('md'){
+        padding-top: 135px;
+    }
     &.active{
         display: block;
     }
@@ -72,6 +75,9 @@
         overflow-y: auto;
         background-color: $color-turquoise-light;
         transition: right $time-fast;
+        @include responsive('md'){
+            padding-top: 135px;
+        }
         &.active{
             right: 0;
         }
