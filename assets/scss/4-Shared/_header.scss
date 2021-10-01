@@ -25,10 +25,15 @@
         @include responsive('md'){
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             width: 100%;
             border-bottom: 2px solid transparentize($color-grey3, .3);
             padding-bottom: 15px;
             margin-bottom: 12px;
+            font-size: 13px;
+        }
+        @include responsive('xl'){
+            font-size: 15px;
         }
         &--links{
             color: $color-black-ipf;
@@ -53,11 +58,15 @@
                 color: $color-black-ipf;
                 transition: color $time-veryfast;
                 .iconSVG{
-                    width: 20px;
-                    height: 20px;
+                    width: 16px;
+                    height: 16px;
                     fill: $color-turquoise;
                     margin-right: 5px;
                     transition: fill $time-veryfast;
+                    @include responsive('xl'){
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
                 &:hover{
                     @include responsive('xl'){
@@ -77,16 +86,19 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 10px;
+        @include responsive('xl'){
+            padding-bottom: 0;
+        }
         &__searchNapply{
             display: flex;
             align-items: center;
-            @include responsive('lg'){
+            @include responsive('xl'){
                 order: 2;
             }
             &--link{
                 @extend %simple-button;
                 display: none;
-                @include responsive('lg'){
+                @include responsive('xl'){
                     display: inline-flex;
                     margin-right: 25px;
                 }
@@ -97,19 +109,28 @@
                     width: 20px;
                     height: 20px;
                     fill: $color-turquoise;
-                    @include responsive('lg'){
+                    transition: fill $time-veryfast;
+                    @include responsive('xl'){
                         fill: $color-black-ipf;
+                    }
+                    &:hover{
+                        @include responsive('xl'){
+                            fill: $color-turquoise;
+                        }
                     }
                 }
             }
         }
         &__logo{
+            @include responsive('xl'){
+                padding-bottom: 10px;
+            }
             &--link{
                 display: block;
             }
             &--img{
                 height: 70px;
-                @include responsive('lg'){
+                @include responsive('xl'){
                     height: 90px;
                 }
             }
@@ -119,6 +140,15 @@
         padding: 15px 0;
         border-top: 2px solid $color-grey3;
         display: none;
+        @include responsive('xl'){
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $color-white;
+            border: none;
+            padding: 0 20px;
+        }
         &--inner{
             width: 100%;
             max-width: 375px;
@@ -126,10 +156,39 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @include responsive('xl'){
+                border-top: 2px solid $color-grey-medium;
+                max-width: none;
+                margin: 0;
+                padding: 15px 0;
+                justify-content: space-between;
+            }
             .iconSVG{
                 width: 20px;
                 height: 20px;
                 fill: $color-turquoise;
+                transition: transform $time-fast, fill $time-veryfast;
+                @include responsive('xl'){
+                    fill: $color-black-ipf;
+                    cursor: pointer;
+                }
+                &.hide-search-mobile{
+                    &:hover{
+                        @include responsive('xl'){
+                            transform: rotate(90deg);
+                            fill: $color-turquoise;
+                        }
+                    }
+                }
+            }
+        }
+        &__logo{
+            display: none;
+            @include responsive('lg'){
+                display: block;
+            }
+            &--img{
+                height: 95px;
             }
         }
         &__fieldBox{
@@ -137,6 +196,11 @@
             border-radius: 4px;
             margin-right: 15px;
             width: 300px;
+            @include responsive('xl'){
+                margin-right: 0;
+                width: 100%;
+                max-width: 425px;
+            }
             &--form{
                 position: relative;
             }
@@ -148,6 +212,9 @@
                     padding: 0 60px 0 12px;
                     border-radius: 5px;
                     width: 100%;
+                    @include responsive('xl'){
+                        height: 55px;
+                    }
                     &:focus{
                         border:1px solid $color-turquoise;
                     }
@@ -155,11 +222,25 @@
             }
             &--submit{
                 position: absolute;
-                top: 10px;
-                right: 10px;
+                top: 0;
+                right: 0;
                 border: none;
+                height: 100%;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                background-color: transparent;
                 .iconSVG{
                     fill: $color-black-ipf;
+                }
+                &:hover{
+                    @include responsive('xl'){
+                        .iconSVG{
+                            fill: $color-turquoise;
+                        }
+                    }
                 }
             }
         }
@@ -168,8 +249,11 @@
 
 // Padding on Body When Heder is Fixed
 .spaceTop{
-    padding-top: 90px;
+    padding-top: 130px;
     @include responsive('md'){
-        padding-top: 140px;
+        padding-top: 180px;
+    }
+    @include responsive('lg'){
+        padding-top: 200px;
     }
 }
