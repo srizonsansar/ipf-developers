@@ -94,37 +94,78 @@
         </section>
         <div class="navigation">
             <div class="navigation__mainNav">
-                <ul class="navigation__mainNav__nav">
-                    <li class="navigation__mainNav__nav--item">
-                        <a class="navigation__mainNav__nav--link" href="#">Our Vision</a>
-                    </li>
-                    <li class="navigation__mainNav__nav--item">
-                        <span class="navigation__mainNav__nav--link">About</span>
-                    </li>
-                    <li class="navigation__mainNav__nav--item">
-                        <a class="navigation__mainNav__nav--link" href="#">What We Support</a>
-                    </li>
-                    <li class="navigation__mainNav__nav--item">
-                        <a class="navigation__mainNav__nav--link" href="#">How To Apply</a>
-                    </li>
-                    <li class="navigation__mainNav__nav--item">
-                        <a class="navigation__mainNav__nav--link" href="#">Grantees</a>
-                    </li>
-                    <li class="navigation__mainNav__nav--item">
-                        <a class="navigation__mainNav__nav--link" href="#">Knowledge Center</a>
-                    </li>
-                    <li class="navigation__mainNav__nav--item">
-                        <a class="navigation__mainNav__nav--link" href="#">News</a>
-                    </li>
-                </ul>
-                <div class="navigation__mainNav__myAccount">
-                    <span class="text">My Account</span>
-                    <a class="link" href="#">
-                        <svg class="iconSVG">
-                            <use xlink:href="#icon-user"></use>
-                        </svg>
-                        Login
-                    </a>
+                <div class="navigation__mainNav--navBlock level1Menu">
+                    <ul class="navigation__mainNav__nav">
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow" data-menu="our-vision">
+                            <span class="link">Our Vision</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow active" data-menu="about">
+                            <span class="link">About</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow" data-menu="what-we-support">
+                            <span class="link">What We Support</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow" data-menu="how-to-apply">
+                            <span class="link">How To Apply</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow" data-menu="grantees">
+                            <span class="link">Grantees</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow" data-menu="knowledge-center">
+                            <span class="link">Knowledge Center</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level2menu hasArrow" data-menu="news">
+                            <span class="link">News</span>
+                        </li>
+                    </ul>
+                    <div class="navigation__mainNav__myAccount">
+                        <span class="text">My Account</span>
+                        <a class="link" href="#">
+                            <svg class="iconSVG">
+                                <use xlink:href="#icon-user"></use>
+                            </svg>
+                            Login
+                        </a>
+                    </div>
+                </div>
+                <!-- About and Its Sub Menu -->
+                <div class="navigation__mainNav--navBlock level2menu about">
+                    <ul class="navigation__mainNav__nav">
+                        <li class="navigation__mainNav__nav--item level2parent">
+                            <span class="link">About</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">Time &amp; History</a>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">About Sir Ian Potter</a>
+                        </li>
+                        <li class="navigation__mainNav__nav--item open-level3menu hasArrow" data-parent="about" data-menu="people">
+                            <span class="link">People</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">Donate</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation__mainNav--navBlock level3Menu people">
+                    <ul class="navigation__mainNav__nav">
+                        <li class="navigation__mainNav__nav--item level3parent" data-parent="about" data-menu="people">
+                            <span class="link">People</span>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">Person One</a>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">Person Two</a>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">Person Three</a>
+                        </li>
+                        <li class="navigation__mainNav__nav--item">
+                            <a href="#" class="link">Person Four</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navigation__mainNav__social">
                     <a class="navigation__mainNav__social--link" href="https://www.facebook.com/ianpotterfoundation" target="_blank" rel="nofollow">
