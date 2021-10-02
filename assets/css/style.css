@@ -1011,6 +1011,42 @@ body.OFHidden {
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
+  .desktop-nav--menuBlock {
+    flex: 0 0 calc(100% - 280px); }
+    @media (min-width: 1400px) {
+      .desktop-nav--menuBlock {
+        flex: 0 0 calc(100% - 300px); } }
+  .desktop-nav__navData--inner {
+    display: flex; }
+  .desktop-nav__navData--title {
+    font-size: 24px;
+    font-weight: 600;
+    width: 180px; }
+  .desktop-nav__navData--subMenu {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 calc(100% - 180px); }
+  .desktop-nav__navData__subMenuList {
+    flex: 1 0 0; }
+    .desktop-nav__navData__subMenuList:not(:last-child) {
+      padding-right: 30px; }
+    .desktop-nav__navData__subMenuList--title {
+      font-size: 17px;
+      font-weight: 600;
+      padding-bottom: 25px; }
+    .desktop-nav__navData__subMenuList .list--item:not(:last-child) {
+      padding-bottom: 12px; }
+    .desktop-nav__navData__subMenuList .list--item.active .list--link {
+      font-weight: 600;
+      color: #35BDB2; }
+    .desktop-nav__navData__subMenuList .list--link {
+      color: #253347;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: block; }
+      @media (min-width: 1200px) {
+        .desktop-nav__navData__subMenuList .list--link:hover {
+          color: #35BDB2; } }
   .desktop-nav__card {
     width: 100%;
     max-width: 280px;

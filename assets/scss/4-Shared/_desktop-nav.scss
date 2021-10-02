@@ -47,6 +47,64 @@
         display: flex;
         justify-content: space-between;
     }
+    &--menuBlock{
+        flex: 0 0 calc(100% - 280px);
+        @include responsive('xxl'){
+            flex: 0 0 calc(100% - 300px);
+        }
+    }
+    &__navData{
+        &--inner{
+            display: flex;
+        }
+        &--title{
+            font-size: 24px;
+            font-weight: 600;
+            width: 180px;
+        }
+        &--subMenu{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 0 calc(100% - 180px);
+        }
+        &__subMenuList{
+            flex: 1 0 0;
+            &:not(:last-child){
+                padding-right: 30px;
+            }
+            &--title{
+                font-size: 17px;
+                font-weight: 600;
+                padding-bottom: 25px;
+            }
+            .list{
+                &--item{
+                    &:not(:last-child){
+                        padding-bottom: 12px;
+                    }
+                    &.active{
+                        .list{
+                            &--link{
+                                font-weight: 600;
+                                color: $color-turquoise;
+                            }
+                        }
+                    }
+                }
+                &--link{
+                    color: $color-black-ipf;
+                    text-decoration: none;
+                    transition: color $time-veryfast;
+                    display: block;
+                    &:hover{
+                        @include responsive('xl'){
+                            color: $color-turquoise;
+                        }
+                    }
+                }
+            }
+        }
+    }
     &__card{
         width: 100%;
         max-width: 280px;       

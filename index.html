@@ -69,13 +69,13 @@
                     </a>
                 </div>
                 <ul class="menuRow">
-                    <li class="menuRow--item">Our Vision</li>
-                    <li class="menuRow--item">About</li>
-                    <li class="menuRow--item">What We Support</li>
-                    <li class="menuRow--item">Can We Apply</li>
-                    <li class="menuRow--item">Grantees</li>
-                    <li class="menuRow--item">Knowledge Center</li>
-                    <li class="menuRow--item">News</li>
+                    <li class="menuRow--item" data-desk-menu="our-vision">Our Vision</li>
+                    <li class="menuRow--item" data-desk-menu="about">About</li>
+                    <li class="menuRow--item" data-desk-menu="what-we-support">What We Support</li>
+                    <li class="menuRow--item" data-desk-menu="can-we-apply">Can We Apply</li>
+                    <li class="menuRow--item" data-desk-menu="grantees">Grantees</li>
+                    <li class="menuRow--item" data-desk-menu="knowledge-center">Knowledge Center</li>
+                    <li class="menuRow--item" data-desk-menu="news">News</li>
                 </ul>
                 <div class="header__midRow__navTrigger">
                     <span class="line line1"></span>
@@ -350,39 +350,62 @@
         </div>
         <div class="desktop-nav">
             <div class="desktop-nav--container">
-                <div class="desktop-nav__navData what-we-support">
-                    <div class="desktop-nav__navData--title">What We Support</div>
-                    <div class="desktop-nav__navData--subMenu">
-                        <div class="desktop-nav__navData__subMenuList">
-                            <div class="desktop-nav__navData__subMenuList--title">Program Areas</div>
-                            <ul class="list">
-                                <li class="list--item"><a class="list--link" href="#">Arts</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Community Wellbeing</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Early Childhood Development</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Environmental Conservation</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Medical Research</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Public Health Research</a></li>
-                            </ul>
+                <div class="desktop-nav--menuBlock">
+                    <div class="desktop-nav__navData our-vision">
+                        <div class="desktop-nav__navData--inner">
+                            <div class="desktop-nav__navData--title">Our Vision</div>
+                            <div class="desktop-nav__navData--subMenu">
+                                <div class="desktop-nav__navData__subMenuList">
+                                    <div class="desktop-nav__navData__subMenuList--title">Our Vision</div>
+                                    <ul class="list">
+                                        <li class="list--item"><a class="list--link" href="#">Vision One</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Vision Two</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Vision Three</a></li>
+                                    </ul>
+                                </div>
+                                <div class="desktop-nav__navData__subMenuList">
+                                    <div class="desktop-nav__navData__subMenuList--title">Vision Sub Menu</div>
+                                    <ul class="list">
+                                        <li class="list--item"><a class="list--link" href="#">Vision One</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Vision Two</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Vision Three</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="desktop-nav__navData--subMenu">
-                        <div class="desktop-nav__navData__subMenuList">
-                            <div class="desktop-nav__navData__subMenuList--title">Major Grants</div>
-                            <ul class="list">
-                                <li class="list--item"><a class="list--link" href="#">Grants One</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Grants Two</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Grants Three</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="desktop-nav__navData--subMenu">
-                        <div class="desktop-nav__navData__subMenuList">
-                            <div class="desktop-nav__navData__subMenuList--title">Sub Funds</div>
-                            <ul class="list">
-                                <li class="list--item"><a class="list--link" href="#">Sub Funds One</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Sub Funds Two</a></li>
-                                <li class="list--item"><a class="list--link" href="#">Sub Funds Three</a></li>
-                            </ul>
+                    <div class="desktop-nav__navData what-we-support">
+                        <div class="desktop-nav__navData--inner">
+                            <div class="desktop-nav__navData--title">What We Support</div>
+                            <div class="desktop-nav__navData--subMenu">
+                                <div class="desktop-nav__navData__subMenuList">
+                                    <div class="desktop-nav__navData__subMenuList--title">Program Areas</div>
+                                    <ul class="list">
+                                        <li class="list--item active"><a class="list--link" href="#">Arts</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Community Wellbeing</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Early Childhood Development</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Environmental Conservation</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Medical Research</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Public Health Research</a></li>
+                                    </ul>
+                                </div>
+                                <div class="desktop-nav__navData__subMenuList">
+                                    <div class="desktop-nav__navData__subMenuList--title">Major Grants</div>
+                                    <ul class="list">
+                                        <li class="list--item"><a class="list--link" href="#">Grants One</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Grants Two</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Grants Three</a></li>
+                                    </ul>
+                                </div>
+                                <div class="desktop-nav__navData__subMenuList">
+                                    <div class="desktop-nav__navData__subMenuList--title">Sub Funds</div>
+                                    <ul class="list">
+                                        <li class="list--item"><a class="list--link" href="#">Sub Funds One</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Sub Funds Two</a></li>
+                                        <li class="list--item"><a class="list--link" href="#">Sub Funds Three</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

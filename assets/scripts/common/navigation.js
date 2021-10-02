@@ -53,11 +53,14 @@ $(document).ready(function(){
 
     // Desktop Nav
     $('.menuRow--item').on('click', function(){
+        var menuClass = $(this).data('desk-menu')
         $(this).toggleClass('active')
         $(this).siblings().removeClass('active')
         $('.desktop-nav').addClass('visible')
+        $('.desktop-nav__navData.' + menuClass).show()
+        $('.desktop-nav__navData.' + menuClass).siblings().hide()
         $('body').addClass('OFHidden')
         $('.header__searchBar').slideDown()
     })
-
+    
 })
