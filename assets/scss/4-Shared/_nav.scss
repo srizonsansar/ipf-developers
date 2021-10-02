@@ -1,0 +1,237 @@
+// Nav Trigger
+.header{
+    &__midRow{
+        &__navTrigger{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 19px;
+            @include responsive('xl'){
+                display: none;
+            }
+            .line{
+                background-color: $color-turquoise;
+                height: 3px;
+                border-radius: 5px;
+                &.line1{
+                    position: relative;
+                    transform-origin: top left;
+                    transition: transform $time-veryfast;
+                    width: 70%;
+                    &.active{
+                        top: 1px;
+                        transform: rotate(45deg);
+                        width: 21px;
+                    }
+                }
+                &.line2{
+                    transition: opacity $time-veryfast;
+                    width: 18px;
+                    &.hidden{
+                        opacity: 0;
+                    }
+                }
+                &.line3{
+                    position: relative;
+                    transform-origin: bottom left;
+                    transition: transform $time-veryfast;
+                    width: 40%;
+                    &.active{
+                        bottom: 1px;
+                        transform: rotate(-45deg);
+                        width: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Side Nav
+.navigation-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    padding-top: 90px;
+    background-color: transparentize($color-white, .2);
+    display: none;
+    @include responsive('md'){
+        padding-top: 135px;
+    }
+    &.active{
+        display: block;
+    }
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 6;
+    width: 300px;
+    height: 100%;
+    padding-top: 90px;
+    overflow-y: auto;
+    background-color: $color-turquoise-light;
+    transition: right $time-fast;
+    @include responsive('md'){
+        padding-top: 135px;
+    }
+    &.active{
+        right: 0;
+    }
+    &--navBlock{
+        &.level2menu, &.level3Menu{
+            display: none;
+            margin-bottom: 30px;
+        }
+    }
+    &__nav{
+        &--item{
+            &.active{
+                .link{
+                    background-color: $color-turquoise;
+                }
+            }
+            &.hasArrow{
+                .link{
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        right: 25px;
+                        top: 30px;
+                        width: 8px;
+                        height: 8px;
+                        border-right: 2px solid $color-white;
+                        border-top: 2px solid $color-white;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            &.level2parent, &.level3parent{
+                position: relative;
+                background-color: $color-turquoise;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    left: 25px;
+                    top: 30px;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 2px solid $color-white;
+                    border-left: 2px solid $color-white;
+                    transform: rotate(-45deg);
+                }
+                .link{
+                    padding-left: 45px;
+                }
+            }
+        }
+        .link{
+            color: $color-white;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+    }
+    &__myAccount{
+        padding: 20px;
+        border-top: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+        .text{
+            font-size: 16px;
+            color: $color-white;
+            font-weight: 500;
+            margin-right: 32px;
+        }
+        .link{
+            border: 2px solid $color-white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            height: 45px;
+            padding: 0 20px;
+            color: $color-white;
+            text-decoration: none;
+            .iconSVG{
+                height: 20px;
+                width: 20px;
+                margin-right: 20px;
+                fill: $color-white;
+            }
+        }
+    }
+    &__social{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 32px;
+        &--link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            margin: 0 10px;
+            .iconSVG{
+                width: 28px;
+                height: 28px;
+                fill: $color-white;
+            }
+        }
+    }
+    &__newsBlock{
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto 30px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: $color-white;
+        display: none;
+        &--link{
+            display: block;
+            text-decoration: none;
+        }
+        &--pic{
+            height: 120px;
+            border-radius: 10px 10px 0 0;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 25px;
+        }
+        &--title{
+            font-size: 17px;
+            font-weight: 600;
+            padding: 0 10px 10px 10px;
+            color: $color-black-ipf;
+        }
+        &--text{
+            line-height: 1.5;
+            padding: 0 10px 10px 10px;
+            color: $color-black-ipf;
+        }
+    }
+    &--links{
+        text-align: center;
+        padding-bottom: 32px;
+        color: $color-white;
+        .link{
+            color: $color-white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+    }
+}

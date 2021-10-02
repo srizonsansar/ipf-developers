@@ -1,0 +1,17 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-grey4;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color-grey4;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color-grey4;
+}
+
+// Input Text Color
+.input{
+    &__field{
+        color: $color-black-ipf;
+    }
+}

@@ -1,0 +1,24 @@
+// Museo font
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museo/MuseoSans-300.eot');
+    src: url('../fonts/museo/MuseoSans-300.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/museo/MuseoSans-300.woff') format('woff'),
+        url('../fonts/museo/MuseoSans-300.ttf') format('truetype'),
+        url('../fonts/museo/MuseoSans-300.svg#MuseoSans-300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museo/MuseoSans-500.eot');
+    src: url('../fonts/museo/MuseoSans-500.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/museo/MuseoSans-500.woff2') format('woff2'),
+        url('../fonts/museo/MuseoSans-500.woff') format('woff'),
+        url('../fonts/museo/MuseoSans-500.ttf') format('truetype'),
+        url('../fonts/museo/MuseoSans-500.svg#MuseoSans-500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }

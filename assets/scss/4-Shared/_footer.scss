@@ -1,0 +1,464 @@
+.footer{
+    &--container{
+        @extend %container;
+        &.plr{
+            padding-left: 35px;
+            padding-right: 35px;
+            @include responsive('md'){
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+    .row{
+        margin: 0;
+        @include responsive('md'){
+            margin: 0 -15px;
+        }
+        &.firstRow{
+            padding-bottom: 30px;
+            @include responsive('md'){
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 0;
+                margin-bottom: 40px;
+                &:after{
+                    @include responsive('md'){
+                        content: "";
+                        position: absolute;
+                        left: 15px;
+                        bottom: 0;
+                        width: calc(100% - 30px);
+                        height: 2px;
+                        background-color: transparentize($color-grey3, .3);;
+                    }
+                }
+            }
+        }
+    }
+    .col{
+        padding: 0;
+        @include responsive('md'){
+            flex: 0 0 50%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include responsive('lg'){
+            flex: 0 0 33.3333%;
+        }
+        @include responsive('xxl'){
+            flex: 0 0 calc((100% - 300px) / 5);
+        }
+    }
+    &__blockContact{
+        border-bottom: 2px solid transparentize($color-grey3, .3);
+        @include responsive('md'){
+            border-bottom: none;
+        }
+        &.col{
+            padding-bottom: 35px;
+            @include responsive('lg'){
+                padding-bottom: 60px;
+            }
+            @include responsive('xxl'){
+                flex: 0 0 300px;
+            }
+        }
+        &--title{
+            font-size: 16px;
+            padding-bottom: 20px;
+            font-weight: 600;
+        }
+        &__logo{
+            padding-bottom: 30px;
+            &--link{
+                display: block;
+            }
+            &--img{
+                width: 145px;
+                margin: 0 auto;
+                @include responsive('md'){
+                    margin: 0;
+                }
+            }
+        }
+        &--address{
+            text-align: center;
+            line-height: 1.25;
+            padding-bottom: 30px;
+            @include responsive('sm'){
+                line-height: 1.4;
+            }
+            @include responsive('md'){
+                text-align: left;
+            }
+            .blockMob{
+                display: block;
+                @include responsive('sm'){
+                    display: inline;
+                }
+            }
+            .blockTab{
+                @include responsive('sm'){
+                    display: block;
+                }
+            }
+            .phone{
+                @include responsive('sm'){
+                    font-weight: 600;
+                }
+                a{
+                    color: $color-black-ipf;
+                    text-decoration: none;
+                }
+            }
+        }
+        &__login{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 30px;
+            @include responsive('md'){
+                align-items: flex-start
+            }
+            &--link{
+                @extend %simple-button;
+                background-color: $color-turquoise2;
+                height: 40px;
+                font-size: 15px;
+                color: $color-black-ipf;
+                font-weight: 600;
+                transition: border-color $time-veryfast, color $time-veryfast;
+                @include responsive('md'){
+                    border: 2px solid $color-turquoise;
+                    background-color: transparent;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                &:hover{
+                    @include responsive('xl'){
+                        border-color: $color-yellow;
+                        background-color: transparent;
+                        color: $color-yellow;
+                    }
+                }
+            }
+        }
+        &__subscribe{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            @include responsive('md'){
+                align-items: flex-start
+            }
+            &--form{
+                position: relative;
+                width: 300px;
+                @include responsive('md'){
+                    width: 100%;
+                    max-width: 300px;
+                }
+                @include responsive('xxl'){
+                    max-width: 235px;
+                }
+                .form{
+                    &__input{
+                        background-color: $color-grey3;
+                        border: 1px solid transparent;
+                        height: 48px;
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 0 40px 0 12px;
+                        &:focus{
+                            border:1px solid $color-turquoise;
+                        }
+                    }
+                }
+            }
+            &--submit{
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: none;
+                height: 48px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                background-color: transparent;
+                .iconSVG{
+                    fill: $color-turquoise;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+    &__blockMenu{
+        border-bottom: 2px solid transparentize($color-grey3, .3);
+        @include responsive('md'){
+            border-bottom: none;
+        }
+        &.hide{
+            display: none;
+            @include responsive('md'){
+                display: block;
+            }
+        }
+        &__title{
+            font-size: 16px;
+            @include responsive('md'){
+                font-size: 17px;
+            }
+            &.moreGap{
+                @include responsive('lg'){
+                    margin-bottom: 50px;
+                }
+            }
+            &.hasBottomBorder{
+                border-bottom: 2px solid transparentize($color-grey3, .3);
+                @include responsive('md'){
+                    border-bottom: none;
+                }
+            }
+            &.hasDropDown{
+                position: relative;
+                &:before, &:after{
+                    content: "";
+                    position: absolute;
+                    right: 10px;
+                    top: 29px;
+                    width: 16px;
+                    height: 2px;
+                    border-radius: 999px;
+                    background-color: $color-black-ipf;
+                    @include responsive('md'){
+                        display: none;
+                    }
+                }
+                &:before{
+                    right: 17px;
+                    top: 22px;
+                    width: 2px;
+                    height: 16px;
+                    transition: opacity $time-veryfast;
+                }
+            }
+            &.nav-opened{
+                &:before{
+                    opacity: 0;
+                }
+            }
+            &--heading{
+                color: $color-black-ipf;
+                display: block;
+                padding: 0 10px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                transition: color $time-veryfast;
+                @include responsive('md'){
+                    height: auto;
+                    padding: 0;
+                    margin-bottom: 20px;
+                }
+                &.link{
+                    text-decoration: none;
+                    &:hover{
+                        @include responsive('xl'){
+                            color: $color-turquoise;
+                        }
+                    }
+                }
+            }
+        }
+        &__list{
+            padding: 0 0 20px 15px;
+            display: none;
+            @include responsive('md'){
+                display: block;
+                padding: 0 0 50px;
+            }
+            @include responsive('xxl'){
+                padding-bottom: 0;
+            }
+            &--link{
+                display: block;
+                color: $color-black-ipf;
+                text-decoration: none;
+                padding: 6px 0;
+                transition: color $time-veryfast;
+                line-height: 1.3;
+                &:hover{
+                    @include responsive('xl'){
+                        color: $color-yellow;
+                    }
+                }
+            }
+        }
+    }
+    &__copyrightRow{
+        border-bottom: 2px solid transparentize($color-grey3, .3);
+        margin-bottom: 30px;
+        @include responsive('lg'){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: none;
+        }
+        &--text{
+            text-align: center;
+            line-height: 1.5;
+            padding-bottom: 25px;
+            @include responsive('lg'){
+                text-align: left;
+                padding-bottom: 0;
+            }
+            .block{
+                display: block;
+                padding-top: 15px;
+                @include responsive('lg'){
+                    display: inline-block;
+                    padding: 0;
+                }
+            }
+            .showDesk{
+                display: none;
+                @include responsive('lg'){
+                    display: inline;
+                }
+            }
+        }
+        &--link{
+            text-decoration: none;
+            color: $color-black-ipf;
+            transition: color $time-veryfast;
+            &:hover{
+                @include responsive('xl'){
+                    color: $color-turquoise;
+                }
+            }
+        }
+        &__social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-bottom: 25px;
+            @include responsive('lg'){
+                padding-bottom: 0;
+            }
+            .text{
+                padding-bottom: 10px;                
+                text-align: center;
+                flex: 0 0 100%;
+                @include responsive('lg'){
+                    flex: 0 0 auto;
+                    padding: 0 20px 0 0;
+                }
+                @include responsive('xl'){
+
+                }
+            }
+            &--link{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include responsive('lg'){
+                    width: 40px;
+                    height: 40px;
+                }
+                @include responsive('xl'){
+                    margin-right: 20px;
+                }
+                &:last-child{
+                    @include responsive('xl'){
+                        margin-right: 0;
+                    }
+                }
+                .iconSVG{
+                    width: 30px;
+                    height: 30px;
+                    fill: $color-turquoise;
+                    transition: fill $time-veryfast;
+                    @include responsive('lg'){
+                        width: 24px;
+                        height: 24px;
+                    }
+                    @include responsive('xl'){
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                &:hover{
+                    .iconSVG{
+                        @include responsive('xl'){
+                            fill: $color-yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__lastRow{
+        padding-bottom: 20px;
+        @include responsive('lg'){
+            padding-bottom: 30px;
+        }
+        @include responsive('xl'){
+            padding-bottom: 40px;
+        }
+        @include responsive('xxl'){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        &__left{
+            padding-bottom: 25px;
+            @include responsive('xxl'){
+                display: flex;
+                align-items: center;
+                padding-bottom: 0;
+            }
+            &__logos{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 20px;
+                @include responsive('xxl'){
+                    padding-bottom: 0;
+                    padding: 0 20px 0 0;
+                }
+                &--img{
+                    height: 32px;
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &--text{
+                text-align: center;
+                line-height: 1.4;
+            }
+        }
+        &__text{
+            text-align: center;
+            &--link{
+                color: $color-black-ipf;
+                text-decoration: none;
+                transition: color $time-veryfast;
+                &:hover{
+                    @include responsive('xl'){
+                        color: $color-turquoise;
+                    }
+                }
+            }
+        }
+    }
+}

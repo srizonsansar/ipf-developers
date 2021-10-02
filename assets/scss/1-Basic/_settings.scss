@@ -1,0 +1,51 @@
+body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: $font-normal;
+    color: $color-black-ipf;
+}
+ul, li, ol, dl, dt, dd, form, p, img, video a, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+}
+button:focus, video:focus, a:focus, input:focus{
+    outline: none;
+}
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+button{
+    cursor: pointer;
+}
+input, select, textarea, button{
+    font-family: $font-normal;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input, textarea {
+    font-size: 16px;
+}
+.icon{
+    font-family: 'ipf-icons';
+}
+svg{
+    display: none;
+}
+.iconSVG, img{
+    display: block;
+}
+
+// Overflow Hidden on Body
+body{
+    &.OFHidden{
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Ian Potter Foundation</title>
+        <meta name="description" content="Your description text here.">
+        <!-- jQuery -->
+        <script src="assets/scripts/jquery-3.6.0.min.js"></script>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <!-- CSS -->
+        <link href="assets/css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- SVG Icons -->
+        <svg width="0" height="0" class="hidden">
+            <symbol id="icon-search" viewBox="0 0 50 49.88">
+                <path d="M6.08,35.56A20.81,20.81,0,0,0,31,39l9.34,9.34a5.64,5.64,0,0,0,8-8L39,30.94A20.8,20.8,0,1,0,6.08,35.56ZM9.76,9.83a15.59,15.59,0,1,1,0,22A15.52,15.52,0,0,1,9.76,9.83Z" transform="translate(0 -0.06)"></path>
+            </symbol>
+            <symbol id="icon-cross" viewBox="0 0 50 49.94">
+                <path d="M1.2,43.28a3.92,3.92,0,0,0,5.54,5.54L25,30.57,43.26,48.82a3.92,3.92,0,0,0,5.54-5.54L30.54,25,48.85,6.72a3.92,3.92,0,0,0-5.54-5.54L25,19.49,6.69,1.18A3.92,3.92,0,0,0,1.15,6.72L19.46,25Z" transform="translate(0 -0.03)"></path>
+            </symbol>
+            <symbol id="icon-arrow-right" viewBox="0 0 50 38.65">
+                <path d="M3.07,27.43H39.44L26.61,39.93a2.29,2.29,0,0,0,0,3.64,3.49,3.49,0,0,0,4.34,0L48.7,27a2.49,2.49,0,0,0,1.3-2.1v0s0-.06,0-.08a2.37,2.37,0,0,0-.17-.72,2.67,2.67,0,0,0-.22-.41,2.91,2.91,0,0,0-.26-.33,3.5,3.5,0,0,0-.24-.3L31,6.43a3.51,3.51,0,0,0-4.34,0,2.29,2.29,0,0,0,0,3.64l13,12.21H3.07A2.86,2.86,0,0,0,0,24.86,2.86,2.86,0,0,0,3.07,27.43Z" transform="translate(0 -5.68)"></path>
+            </symbol>
+            <symbol id="icon-facebook" viewBox="0 0 26.58 50">
+                <path d="M36.55,27.91l1.37-9H29.31V13.1c0-2.45,1.2-4.85,5.06-4.85h3.92V.61a47.64,47.64,0,0,0-7-.61C24.24,0,19.6,4.3,19.6,12.09v6.84H11.71v9H19.6V49.62a31.2,31.2,0,0,0,9.71,0V27.91Z" transform="translate(-11.71)"></path>
+            </symbol>
+            <symbol id="icon-youtube" viewBox="0 0 50 35">
+                <path d="M49,13a6.28,6.28,0,0,0-4.42-4.43c-3.9-1-19.54-1-19.54-1s-15.64,0-19.54,1A6.28,6.28,0,0,0,1,13C0,16.86,0,25,0,25s0,8.14,1,12a6.28,6.28,0,0,0,4.42,4.43c3.9,1,19.54,1,19.54,1s15.64,0,19.54-1A6.28,6.28,0,0,0,49,37c1-3.89,1-12,1-12S50,16.86,49,13ZM20,32.5v-15L33,25Z" transform="translate(0 -7.5)"></path>
+            </symbol>
+            <symbol id="icon-twitter" viewBox="0 0 50 40.63">
+                <path d="M15.72,45.31c18.87,0,29.19-15.63,29.19-29.18,0-.45,0-.89,0-1.33A20.85,20.85,0,0,0,50,9.49a20.44,20.44,0,0,1-5.89,1.61,10.32,10.32,0,0,0,4.51-5.67A20.67,20.67,0,0,1,42.1,7.92a10.26,10.26,0,0,0-17.74,7,10.74,10.74,0,0,0,.26,2.33A29.19,29.19,0,0,1,3.48,6.56,10.29,10.29,0,0,0,6.66,20.25,10.26,10.26,0,0,1,2,19v.13a10.28,10.28,0,0,0,8.23,10,10.07,10.07,0,0,1-4.63.18,10.27,10.27,0,0,0,9.58,7.12,20.52,20.52,0,0,1-12.74,4.4A22.18,22.18,0,0,1,0,40.71a29.1,29.1,0,0,0,15.72,4.6" transform="translate(0 -4.69)"></path>
+            </symbol>
+            <symbol id="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.48 50">
+                <path d="M45.24,46.28A3.78,3.78,0,0,1,41.42,50H8.58a3.78,3.78,0,0,1-3.82-3.72C4.76,35.41,13.82,26.6,25,26.6S45.24,35.41,45.24,46.28ZM25,31.91A14.64,14.64,0,0,0,10.32,44.68H39.68A14.64,14.64,0,0,0,25,31.91Zm0-7.44A12.41,12.41,0,0,1,12.42,12.23,12.41,12.41,0,0,1,25,0,12.41,12.41,0,0,1,37.58,12.23,12.41,12.41,0,0,1,25,24.47Zm0-5.32a7,7,0,0,0,7.11-6.92,7.11,7.11,0,0,0-14.22,0A7,7,0,0,0,25,19.15Z" transform="translate(-4.76)"></path>
+            </symbol>
+        </svg>
+        <section class="header">
+            <div class="header__topBar">
+                <a href="#" class="header__topBar--links">Links</a>
+                <a href="#" class="header__topBar--links">Contact</a>
+                <a href="#" class="header__topBar--links">FAQs</a>
+                <div class="header__topBar__login">
+                    <a href="#" class="header__topBar__login--link">
+                        <svg class="iconSVG">
+                            <use xlink:href="#icon-user"></use>
+                          </svg>
+                        Login
+                    </a>
+                </div>
+            </div>
+            <div class="header__midRow">
+                <div class="header__midRow__searchNapply">
+                    <a href="#" class="header__midRow__searchNapply--link">Apply</a>
+                    <div class="header__midRow__searchNapply--search">
+                        <svg class="iconSVG show-search-mobile">
+                            <use xlink:href="#icon-search"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__midRow__logo">
+                    <a href="/" class="header__midRow__logo--link">
+                        <img class="header__midRow__logo--img" src="assets/images/logo.png" alt="The Ian Potter Foundation" />
+                    </a>
+                </div>
+                <ul class="menuRow">
+                    <li class="menuRow--item" data-desk-menu="our-vision">Our Vision</li>
+                    <li class="menuRow--item" data-desk-menu="about">About</li>
+                    <li class="menuRow--item" data-desk-menu="what-we-support">What We Support</li>
+                    <li class="menuRow--item" data-desk-menu="can-we-apply">Can We Apply</li>
+                    <li class="menuRow--item" data-desk-menu="grantees">Grantees</li>
+                    <li class="menuRow--item" data-desk-menu="knowledge-center">Knowledge Center</li>
+                    <li class="menuRow--item" data-desk-menu="news">News</li>
+                </ul>
+                <div class="header__midRow__navTrigger">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            </div>
+            <div class="header__searchBar">
+                <div class="header__searchBar--inner">
+                    <a href="/" class="header__searchBar__logo">
+                        <img class="header__searchBar__logo--img" src="assets/images/logo.png" alt="The Ian Potter Foundation" />
+                    </a>
+                    <div class="header__searchBar__fieldBox">
+                        <form class="header__searchBar__fieldBox--form">
+                            <input type="text" class="input__field" name="search" placeholder="Search" />
+                            <button class="header__searchBar__fieldBox--submit" type="submit">
+                                <svg class="iconSVG">
+                                    <use xlink:href="#icon-search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <svg class="iconSVG hide-search-mobile">
+                        <use xlink:href="#icon-cross"></use>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <!-- Navigation Start Here for Mobile -->
+        <div class="navigation-overlay"></div>
+        <div class="navigation">
+            <div class="navigation--navBlock level1Menu">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item open-level2menu hasArrow" data-menu="our-vision">
+                        <span class="link">Our Vision</span>
+                    </li>
+                    <li class="navigation__nav--item open-level2menu hasArrow active" data-menu="about">
+                        <span class="link">About</span>
+                    </li>
+                    <li class="navigation__nav--item open-level2menu hasArrow" data-menu="what-we-support">
+                        <span class="link">What We Support</span>
+                    </li>
+                    <li class="navigation__nav--item open-level2menu hasArrow" data-menu="how-to-apply">
+                        <span class="link">How To Apply</span>
+                    </li>
+                    <li class="navigation__nav--item open-level2menu hasArrow" data-menu="grantees">
+                        <span class="link">Grantees</span>
+                    </li>
+                    <li class="navigation__nav--item open-level2menu hasArrow" data-menu="knowledge-center">
+                        <span class="link">Knowledge Center</span>
+                    </li>
+                    <li class="navigation__nav--item open-level2menu hasArrow" data-menu="news">
+                        <span class="link">News</span>
+                    </li>
+                </ul>
+                <div class="navigation__myAccount">
+                    <span class="text">My Account</span>
+                    <a class="link" href="#">
+                        <svg class="iconSVG">
+                            <use xlink:href="#icon-user"></use>
+                        </svg>
+                        Login
+                    </a>
+                </div>
+                <div class="navigation__social">
+                    <a class="navigation__social--link" href="https://www.facebook.com/ianpotterfoundation" target="_blank" rel="nofollow">
+                        <svg class="iconSVG">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="navigation__social--link" href="https://www.youtube.com/channel/UCvK56sGtyh8-oyT2-JhWfjg" target="_blank" rel="nofollow">
+                        <svg class="iconSVG">
+                            <use xlink:href="#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a class="navigation__social--link" href="https://twitter.com/IanPotterFdn" target="_blank" rel="nofollow">
+                        <svg class="iconSVG">
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Our Vision and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu our-vision">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">Our Vision</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Vision 1</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Vision 2</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Vision 3</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Vision 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Our Vision Menu -->
+            <!-- About and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu about">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">About</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Time &amp; History</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">About Sir Ian Potter</a>
+                    </li>
+                    <li class="navigation__nav--item open-level3menu hasArrow" data-parent="about" data-menu="people">
+                        <span class="link">People</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Donate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation--navBlock level3Menu people">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level3parent" data-parent="about" data-menu="people">
+                        <span class="link">People</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Person One</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Person Two</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Person Three</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Person Four</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of About and Its Sub Menu -->
+            <!-- What we support and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu what-we-support">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">What We Support</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Support 1</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Support 2</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Support 3</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Support 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of What we support Menu -->
+            <!-- How to Apply and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu how-to-apply">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">How To Apply</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Option 1</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Option 2</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Option 3</a>
+                    </li>
+                    <li class="navigation__nav--item open-level3menu hasArrow" data-parent="how-to-apply" data-menu="option-4">
+                        <span class="link">Option 4</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation--navBlock level3Menu option-4">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level3parent" data-parent="how-to-apply" data-menu="option-4">
+                        <span class="link">Option 4</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Lorem Ipsum 1</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Lorem Ipsum 2</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Lorem Ipsum 3</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Lorem Ipsum 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of How to Apply and Its Sub Menu -->
+            <!-- Grantees and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu grantees">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">Grantees</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Grantees 1</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Grantees 2</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Grantees 3</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Grantees 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Grantees Menu -->
+            <!-- Knowledge Center and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu knowledge-center">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">Knowledge Center</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Knowledge Center 1</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Knowledge Center 2</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Knowledge Center 3</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Knowledge Center 4</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Knowledge Center Menu -->
+            <!-- News and Its Sub Menu -->
+            <div class="navigation--navBlock level2menu news">
+                <ul class="navigation__nav">
+                    <li class="navigation__nav--item level2parent">
+                        <span class="link">News</span>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">Blog</a>
+                    </li>
+                    <li class="navigation__nav--item">
+                        <a href="#" class="link">e-Newsletter Archive</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of News Menu -->
+            <div class="navigation__newsBlock">
+                <a href="#" class="navigation__newsBlock--link">
+                    <div class="navigation__newsBlock--pic" style="background-image: url('assets/images/program/community-wellbeing.jpg');"></div>
+                    <h3 class="navigation__newsBlock--title">Card Title</h3>
+                    <p class="navigation__newsBlock--text">This round is for Major grants and program areas by invitation only.</p>
+                </a>
+            </div>
+            <div class="navigation--links">
+                <a class="link" href="#">Links</a> | <a class="link" href="#">Contact</a> | <a class="link" href="#">FAQs</a>
+            </div>
+        </div>
+        <div class="desktop-nav">
+            <div class="desktop-nav--top">
+                <div class="desktop-nav--container">
+                    <div class="desktop-nav--menuBlock">
+                        <div class="desktop-nav__navData our-vision">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">Our Vision</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Our Vision</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Vision One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Vision Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Vision Three</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Vision Sub Menu</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Vision One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Vision Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Vision Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-nav__navData about">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">About</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">About Sub Menu</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">About One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Three</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Four</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Five</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Six</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">About Sub Menu</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">About One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Three</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">About Sub Menu</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">About One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">About Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-nav__navData what-we-support">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">What We Support</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Program Areas</div>
+                                        <ul class="list">
+                                            <li class="list--item active"><a class="list--link" href="#">Arts</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Community Wellbeing</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Early Childhood Development</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Environmental Conservation</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Medical Research</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Public Health Research</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Major Grants</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Grants One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grants Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grants Three</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Sub Funds</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-nav__navData can-we-apply">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">Can We Apply</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Can We Apply Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Three</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Four</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Five</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Six</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Can We Apply Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Can We Apply Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-nav__navData grantees">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">Grantees</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Grantees Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Grantees One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grantees Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grantees Three</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grantees Four</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grantees Five</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Grantees Six</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Grantees Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds Three</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Grantees Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Sub Funds Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-nav__navData knowledge-center">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">Knowledge Center</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Knowledge Center Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Three</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Four</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Five</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Six</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Knowledge Center Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Three</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">Knowledge Center Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">Knowledge Center Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-nav__navData news">
+                            <div class="desktop-nav__navData--inner">
+                                <div class="desktop-nav__navData--title">News</div>
+                                <div class="desktop-nav__navData--subMenu">
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">News Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">News One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Three</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Four</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Five</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Six</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">News Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">News One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Three</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="desktop-nav__navData__subMenuList">
+                                        <div class="desktop-nav__navData__subMenuList--title">News Sub</div>
+                                        <ul class="list">
+                                            <li class="list--item"><a class="list--link" href="#">News One</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Two</a></li>
+                                            <li class="list--item"><a class="list--link" href="#">News Three</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-nav__card">
+                        <a href="#" class="desktop-nav__card--link">
+                            <div class="desktop-nav__card--pic" style="background-image: url('assets/images/program/early-childhood-development.jpg');"></div>
+                            <div class="desktop-nav__card--title">Card Title</div>
+                            <p class="desktop-nav__card--text">This round is for Major grants and program areas by invitation only.</p>
+                            <div class="desktop-nav__card__btn">
+                                <span class="desktop-nav__card__btn--link">Find out more</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="desktop-nav__quickLinks">
+                    <a class="desktop-nav__quickLinks--link" href="#">Policies</a> | <a class="desktop-nav__quickLinks--link" href="#">Sitemap</a> | <a class="desktop-nav__quickLinks--link" href="#">Places</a> | <a class="desktop-nav__quickLinks--link" href="#">Catalysing Change</a>
+                </div>
+            </div>
+            <div class="desktop-nav__mainLinks">
+                <a href="#" class="desktop-nav__mainLinks--links">Links</a>
+                <a href="#" class="desktop-nav__mainLinks--links">Contact</a>
+                <a href="#" class="desktop-nav__mainLinks--links">FAQs</a>
+                <div class="desktop-nav__mainLinks__login">
+                    <a href="#" class="desktop-nav__mainLinks__login--link">
+                        <svg class="iconSVG">
+                            <use xlink:href="#icon-user"></use>
+                          </svg>
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+        <main class="homepage spaceTop">
+            <section class="welcomeHome">
+                <div class="welcomeHome--container">
+                    <div class="welcomeHome__textBlock">
+                        <h1 class="welcomeHome__textBlock--title">The lan <span class="blockMob">Potter</span> <span class="block">Foundation</span></h1>
+                        <p class="welcomeHome__textBlock--text">The Ian Potter Foundation makes grants nationally to support charitable organisations working to benefit the community across a wide range of sectors and endeavours.</p>
+                        <div class="welcomeHome__textBlock__btn">
+                            <a href="#" class="welcomeHome__textBlock__btn--link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="welcomeHome--image" style="background-image: url('assets/images/welcome-bg.jpg');"></div>
+                </div>
+            </section>
+            <section class="program">
+                <div class="program--container">
+                    <div class="program__textBlock">
+                        <h2 class="program__textBlock--title">Our <span class="block">Program</span> Areas</h2>
+                        <p class="program__textBlock--text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit dolorem.</p>
+                        <div class="program__textBlock__btn">
+                            <a class="program__textBlock__btn--link" href="#">Learn more</a>
+                        </div>
+                    </div>
+                    <ul class="program__list">
+                        <li class="program__list--item">
+                            <a href="#" class="program__list--link">
+                                <div class="program__list--img" style="background-image:url('assets/images/program/community-wellbeing.jpg')"></div>
+                                <div class="program__list--infoBlock">
+                                    <h3 class="program__list--category yellow">FAIR</h3>
+                                    <h4 class="program__list--title">Community Wellbeing</h4>
+                                    <div class="program__list__btn">
+                                        <span class="program__list__btn--link yellow" href="#">Find out more</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="program__list--item">
+                            <a href="#" class="program__list--link">
+                                <div class="program__list--img" style="background-image:url('assets/images/program/early-childhood-development.jpg')"></div>
+                                <div class="program__list--infoBlock">
+                                    <h3 class="program__list--category yellow">FAIR</h3>
+                                    <h4 class="program__list--title">Early Childhood Development</h4>
+                                    <div class="program__list__btn">
+                                        <span class="program__list__btn--link yellow" href="#">Find out more</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="program__list--item">
+                            <a href="#" class="program__list--link">
+                                <div class="program__list--img" style="background-image:url('assets/images/program/medical-research.jpg')"></div>
+                                <div class="program__list--infoBlock">
+                                    <h3 class="program__list--category blue">HEALTHY</h3>
+                                    <h4 class="program__list--title">Medical Research</h4>
+                                    <div class="program__list__btn">
+                                        <span class="program__list__btn--link blue" href="#">Find out more</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="program__list--item">
+                            <a href="#" class="program__list--link">
+                                <div class="program__list--img" style="background-image:url('assets/images/program/public-health-research.jpg')"></div>
+                                <div class="program__list--infoBlock">
+                                    <h3 class="program__list--category blue">HEALTHY</h3>
+                                    <h4 class="program__list--title">Public Health Research</h4>
+                                    <div class="program__list__btn">
+                                        <span class="program__list__btn--link blue" href="#">Find out more</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="program__list--item">
+                            <a href="#" class="program__list--link">
+                                <div class="program__list--img" style="background-image:url('assets/images/program/environment.jpg')"></div>
+                                <div class="program__list--infoBlock">
+                                    <h3 class="program__list--category green">SUSTAINABLE</h3>
+                                    <h4 class="program__list--title">Environment</h4>
+                                    <div class="program__list__btn">
+                                        <span class="program__list__btn--link green" href="#">Find out more</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="program__list--item">
+                            <a href="#" class="program__list--link">
+                                <div class="program__list--img" style="background-image:url('assets/images/program/arts.jpg')"></div>
+                                <div class="program__list--infoBlock">
+                                    <h3 class="program__list--category pink">VIBRANT</h3>
+                                    <h4 class="program__list--title">Arts</h4>
+                                    <div class="program__list__btn">
+                                        <span class="program__list__btn--link pink" href="#">Find out more</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="foundation">
+                <div class="foundation--container">
+                    <h2 class="foundation--title">Foundation Staff</h2>
+                    <div class="foundation--info">
+                        <ul class="foundation__nav">
+                            <li class="foundation__nav--list" data-foundation="slide1">
+                                <span class="text">The Hon. Alex Chernov AC QC</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide2">
+                                <span class="text">Mr Charles Goode AC (Chairman)</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide3">
+                                <span class="text">The Hon. Alex Chernov AC QC</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide4">
+                                <span class="text">Mr Anthony Burgess</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide5">
+                                <span class="text">The Hon. Susan Crennan AC QC</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide6">
+                                <span class="text">Mr Charles Goode AC (Chairman)</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide7">
+                                <span class="text">The Hon. Alex Chernov AC QC</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide8">
+                                <span class="text">Mr Anthony Burgess</span>
+                            </li>
+                            <li class="foundation__nav--list" data-foundation="slide9">
+                                <span class="text">The Hon. Susan Crennan AC QC</span>
+                            </li> 
+                        </ul>
+                        <div class="foundation__slides">
+                            <div class="foundation__slides--item" id="slide1">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">The Hon. Alex Chernov AC QC</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide2">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/charles-goode.jpg" alt="Charles Goode" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">Mr Charles Goode AC (Chairman)</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Mr Charles Goode is the Chairman of the Australian United Investment Company Ltd, Diversified United Investment Ltd, and Flagstaff Partners. In February 2010 he retired as Chairman of Australia and New Zealand Banking Group; in July 2007 as Chairman of Woodside Petroleum Ltd after serving as a director for 19 years and as Chairman for 8 years.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide3">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">The Hon. Alex Chernov AC QC</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide4">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">Mr Anthony Burgess</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide5">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">The Hon. Susan Crennan AC QC</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide6">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">Mr Charles Goode AC (Chairman)</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide7">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">The Hon. Alex Chernov AC QC</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide8">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">Mr Anthony Burgess</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foundation__slides--item" id="slide9">
+                                <div class="foundation__slides__photo">
+                                    <img class="foundation__slides__photo--img" src="assets/images/foundation/no-image.png" alt="Name of the Person" />
+                                </div>
+                                <div class="foundation__slides__info">
+                                    <h3 class="foundation__slides__info--title"><span class="text">The Hon. Susan Crennan AC QC</span></h3>
+                                    <h4 class="foundation__slides__info--subTitle">Bio</h4>
+                                    <div class="foundation__slides__info--bioTitle"><span class="block">Governor since 1987, Chairman since 1994 <span class="showMob">|</span></span> BCom(Hons) Melb MBA Columbia Hon LLD Melb Hon LLD Monash</div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="foundation__slides__info__btn">
+                                        <a href="#" class="foundation__slides__info__btn--link">Read Full Bio</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </main>
+        <section class="footer">
+            <div class="footer--container plr">
+                <div class="row firstRow">
+                    <div class="footer__blockContact col">
+                        <div class="footer__blockContact__logo">
+                            <a class="footer__blockContact__logo--link" href="/">
+                                <img class="footer__blockContact__logo--img" src="assets/images/logo.png" alt="The Ian Potter Foundation" />
+                            </a>
+                        </div>
+                        <p class="footer__blockContact--address">Level 3,<span class="blockMob"></span> 111 Collins Street,<span class="blockMob blockTab"></span> Melbourne VIC<span class="blockMob"></span> 3000<span class="blockTab"></span> Australia<span class="blockMob blockTab"></span> <span class="phone">(+613) 9650 3188</span></p>
+                        <div class="footer__blockContact__login">
+                            <h3 class="footer__blockContact--title">My Account</h3>
+                            <a class="footer__blockContact__login--link" href="#">Login</a>
+                        </div>
+                        <div class="footer__blockContact__subscribe">
+                            <h3 class="footer__blockContact--title">Subscribe to our Newsletter</h3>
+                            <form class="footer__blockContact__subscribe--form">
+                                <input class="form__input" type="email" placeholder="E-mail" />
+                                <button class="footer__blockContact__subscribe--submit">
+                                    <svg class="iconSVG">
+                                        <use xlink:href="#icon-arrow-right"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer__blockMenu col">
+                        <h3 class="footer__blockMenu__title hasBottomBorder moreGap">
+                            <a class="footer__blockMenu__title--heading link" href="#">How to Apply for a Grant</a>
+                        </h3>
+                        <h3 class="footer__blockMenu__title moreGap">
+                            <a class="footer__blockMenu__title--heading link" href="#">Funding Rounds</a>
+                        </h3>
+                        <div class="footer__blockMenu hide">
+                            <h3 class="footer__blockMenu__title">
+                                <span class="footer__blockMenu__title--heading">Grantees</span>
+                            </h3>
+                            <ul class="footer__blockMenu__list">
+                                <li class="footer__blockMenu__list--item">
+                                    <a class="footer__blockMenu__list--link" href="#">Welcome</a>
+                                </li>
+                                <li class="footer__blockMenu__list--item">
+                                    <a class="footer__blockMenu__list--link" href="#">Acknowledging your Grant</a>
+                                </li>
+                                <li class="footer__blockMenu__list--item">
+                                    <a class="footer__blockMenu__list--link" href="#">Communications tips</a>
+                                </li>
+                                <li class="footer__blockMenu__list--item">
+                                    <a class="footer__blockMenu__list--link" href="#">Reporting</a>
+                                </li>
+                                <li class="footer__blockMenu__list--item">
+                                    <a class="footer__blockMenu__list--link" href="#">The Ian Potter Foundation Evaluation Pool</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__blockMenu col">
+                        <h3 class="footer__blockMenu__title hasDropDown">
+                            <span class="footer__blockMenu__title--heading">About</span>
+                        </h3>
+                        <ul class="footer__blockMenu__list">
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Timeline & History</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">About Sir Ian Potter</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">People</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__blockMenu col">
+                        <h3 class="footer__blockMenu__title hasDropDown">
+                            <span class="footer__blockMenu__title--heading">What we support</span>
+                        </h3>
+                        <ul class="footer__blockMenu__list">
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Program Areas</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Major Grants</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Sub-Funds</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__blockMenu col">
+                        <h3 class="footer__blockMenu__title hasDropDown">
+                            <span class="footer__blockMenu__title--heading" href="#">Knowledge Centre</span>
+                        </h3>
+                        <ul class="footer__blockMenu__list">
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Annual Reports</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Case Studies</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Grants Database</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Our Learnings</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Sustainable Development Goals</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__blockMenu col">
+                        <h3 class="footer__blockMenu__title hasDropDown">
+                            <span class="footer__blockMenu__title--heading">News</span>
+                        </h3>
+                        <ul class="footer__blockMenu__list">
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">Blog</a>
+                            </li>
+                            <li class="footer__blockMenu__list--item">
+                                <a class="footer__blockMenu__list--link" href="#">e-Newsletter Archive</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copyrightRow">
+                    <p class="footer__copyrightRow--text"><a href="#" class="footer__copyrightRow--link">Sitemap</a> | <a href="#" class="footer__copyrightRow--link">Policies</a> | <a href="#" class="footer__copyrightRow--link">Links</a> | <a href="#" class="footer__copyrightRow--link">Contact</a> <span class="showDesk">|</span> <span class="block">&copy; 2021 <a href="/" class="footer__copyrightRow--link">Ian Potter Foundation</a> All Rights Reserved.</span></p>
+                    <div class="footer__copyrightRow__social">
+                        <span class="text">We’re Social</span>
+                        <a class="footer__copyrightRow__social--link" href="https://www.facebook.com/ianpotterfoundation" target="_blank" rel="nofollow">
+                            <svg class="iconSVG">
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__copyrightRow__social--link" href="https://www.youtube.com/channel/UCvK56sGtyh8-oyT2-JhWfjg" target="_blank" rel="nofollow">
+                            <svg class="iconSVG">
+                                <use xlink:href="#icon-youtube"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__copyrightRow__social--link" href="https://twitter.com/IanPotterFdn" target="_blank" rel="nofollow">
+                            <svg class="iconSVG">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__lastRow">
+                    <div class="footer__lastRow__left">
+                        <div class="footer__lastRow__left__logos">
+                            <img class="footer__lastRow__left__logos--img" src="assets/images/flag-torres-strait-islanders.jpg" alt="Torres Strait Islanders" />
+                            <img class="footer__lastRow__left__logos--img" src="assets/images/flag-australian-aboriginal.jpg" alt="Australian Aboriginal" />
+                        </div>
+                        <p class="footer__lastRow__left--text">We acknowledge the Traditional Custodians of the land on which we work. We pay our respects to their Elders past and present.</p>
+                    </div>
+                    <p class="footer__lastRow__text">Crafted by <a class="footer__lastRow__text--link" href="#">Soul+Wolf</a></p>
+                </div>
+            </div>
+        </section> 
+        <!-- Common JS -->
+        <script src="assets/scripts/common/active-header-on-scroll.js"></script>
+        <script src="assets/scripts/common/navigation.js"></script>
+        <script src="assets/scripts/common/header-search.js"></script>
+        <script src="assets/scripts/common/footer-menu.js"></script>
+        <!-- Home Page -->
+        <script src="assets/scripts/home/foundation-staff.js"></script>
+        <!-- Slick Slider Library -->
+        <script src="assets/slick-slider/slick.js"></script>
+        <link href="assets/slick-slider/slick.css" rel="stylesheet" />
+        <script src="assets/scripts/libraries/slick-slider.js"></script>
+    </body>
+</html>

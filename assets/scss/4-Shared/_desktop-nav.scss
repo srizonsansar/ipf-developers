@@ -1,0 +1,247 @@
+.menuRow{
+    display: none;
+    @include responsive('xl'){
+        display: flex;
+    }
+    &--item{
+        font-size: 17px;
+        font-weight: 500;
+        cursor: pointer;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid transparent;
+        @include responsive('xxl'){
+            height: 100px;
+        }
+        &:not(:last-child){
+            margin-right: 25px;
+            @include responsive('xxl'){
+                margin-right: 35px;
+            }
+            @include responsive('xxxl'){
+                margin-right: 45px;
+            }
+        }
+        &.active{
+            color: $color-turquoise;
+            border-color: $color-turquoise;
+        }
+    }
+}
+.desktop-nav{
+    background-color: $color-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 175px;
+    padding: 175px 0 140px;
+    @include responsive('xxl'){
+        padding-top: 220px;
+    }
+    &.visible{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    &--container{
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @include responsive('xxxl'){
+            margin-bottom: 50px;
+        }
+    }
+    &--menuBlock{
+        flex: 0 0 calc(100% - 280px);
+        @include responsive('xxl'){
+            flex: 0 0 calc(100% - 300px);
+        }
+    }
+    &__navData{
+        &--inner{
+            display: flex;
+        }
+        &--title{
+            font-size: 24px;
+            font-weight: 600;
+            width: 180px;
+            padding-right: 20px;
+        }
+        &--subMenu{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 0 calc(100% - 180px);
+        }
+        &__subMenuList{
+            flex: 1 0 0;
+            padding: 0 15px;
+            &--title{
+                font-size: 17px;
+                font-weight: 600;
+                padding-bottom: 25px;
+            }
+            .list{
+                &--item{
+                    &:not(:last-child){
+                        padding-bottom: 12px;
+                    }
+                    &.active{
+                        .list{
+                            &--link{
+                                font-weight: 600;
+                                color: $color-turquoise;
+                            }
+                        }
+                    }
+                }
+                &--link{
+                    color: $color-black-ipf;
+                    text-decoration: none;
+                    transition: color $time-veryfast;
+                    display: block;
+                    &:hover{
+                        @include responsive('xl'){
+                            color: $color-turquoise;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__card{
+        width: 100%;
+        max-width: 280px;       
+        box-shadow: 0 0 10px transparentize($color-black, .9);
+        border-radius: 10px;
+        overflow: hidden;
+        @include responsive('xxl'){
+            max-width: 300px;
+        }
+        &--link{
+            display: block;
+            padding: 10px;
+            color: $color-black-ipf;
+            text-decoration: none;
+            @include responsive('xxl'){
+                padding: 20px;
+            }
+        }
+        &--pic{
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            @include responsive('xxl'){
+                height: 210px;
+                margin-bottom: 25px;
+            }
+        }
+        &--title{
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding: 0 10px;
+            @include responsive('xxl'){
+                padding: 0;
+            }
+        }
+        &--text{
+            line-height: 1.5;
+            padding: 0 10px;
+            @include responsive('xxl'){
+                padding: 0 0 20px;
+            }
+        }
+        &__btn{
+            display: none;
+            @include responsive('xxl'){
+                display: flex;
+            }
+            &--link{
+                font-size: 14px;
+                border-radius: 5px;
+                font-weight: 500;
+                padding: 10px 18px;
+                border: 2px solid $color-turquoise;
+                transition: background-color $time-veryfast, color $time-veryfast;
+                &:hover{
+                    @include responsive('xl'){
+                        background-color: $color-turquoise;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    &__quickLinks{
+        display: none;
+        font-size: 13px;
+        padding-top: 40px;
+        margin: 0 60px;
+        border-top: 2px solid $color-grey7;
+        @include responsive('xxxl'){
+            display: flex;
+            justify-content: center;
+        }
+        &--link{
+          color: $color-black-mid;
+          text-decoration: none;
+          padding: 0 3px;
+          &:hover{
+              color: $color-turquoise;
+          }
+        }
+    }
+    &__mainLinks{
+        display: none;
+        padding: 0 30px;
+        @include responsive('xxxl'){
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            font-size: 15px;
+        }
+        &--links{
+            color: $color-black-ipf;
+            text-decoration: none;
+            transition: color $time-veryfast;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            &:hover{
+                color: $color-turquoise;
+            }
+        }
+        &__login{
+            border-left: 2px solid darken($color-grey3, 5%);
+            padding-left: 15px;
+            &--link{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $color-blue;
+                transition: color $time-veryfast;
+                .iconSVG{
+                    width: 20px;
+                    height: 20px;
+                    fill: $color-blue;
+                    margin-right: 5px;
+                    transition: fill $time-veryfast;
+                }
+                &:hover{
+                    color: $color-yellow;
+                    .iconSVG{
+                        fill: $color-yellow;
+                    }
+                }
+            }
+        }
+    }
+}

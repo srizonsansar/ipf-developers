@@ -1,0 +1,106 @@
+.welcomeHome{
+    padding: 0 35px;
+    @include responsive('md'){
+        padding: 0 20px 60px;
+    }
+    @include responsive('lg'){
+        padding-bottom: 80px
+    }
+    &--container{
+        @extend %container;
+        max-width: 1400px;
+        @include responsive('lg'){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__textBlock{
+        @include responsive('lg'){
+            flex: 0 0 52%;
+            padding-right: 50px;
+        }
+        &--title{
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            color: $color-turquoise;
+            padding-bottom: 15px;
+            @include responsive('lg'){
+                font-size: 64px;
+            }
+            @include responsive('xl'){
+                font-size: 80px;
+                letter-spacing: -3.5px;
+            }
+            @include responsive('xxl'){
+                font-size: 100px;
+                letter-spacing: -6px;
+            }
+            .blockMob{
+                display: block;
+                @include responsive('xs'){
+                    display: inline;
+                }
+            }
+            .block{
+                display: block;
+            }
+        }
+        &--text{
+            line-height: 1.4;
+            padding-bottom: 20px;
+            color: $color-grey-body;
+            width: 100%;
+            max-width: 485px;
+            @include responsive('lg'){
+                font-size: 18px;
+                padding-bottom: 30px;
+            }
+            @include responsive('xl'){
+                font-size: 20px;
+                padding-bottom: 40px;
+            }
+            @include responsive('xxl'){
+                font-size: 21px;
+                padding-bottom: 60px;
+            }
+        }
+        &__btn{
+            padding-bottom: 50px;
+            @include responsive('lg'){
+                padding-bottom: 0;
+            }
+            &--link{
+                @extend %button-arrow;
+            }
+        }
+    }
+    &--image{
+        height: 305px;
+        background-position: center;
+        background-size: cover;
+        margin: 0 -35px;
+        @include responsive('xs'){
+            height: 350px;
+        }
+        @include responsive('sm'){
+            height: 400px;
+        }
+        @include responsive('md'){
+            height: 500px;
+            margin: 0 -20px;
+        }
+        @include responsive('lg'){
+            margin: 0;
+            flex: 0 0 48%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        @include responsive('xxl'){
+            height: 755px;
+            border-radius: 15px;
+        }
+    }
+}
