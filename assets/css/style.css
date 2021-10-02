@@ -1002,7 +1002,8 @@ body.OFHidden {
   width: 100%;
   height: 100%;
   display: none;
-  padding-top: 200px; }
+  display: block;
+  padding-top: 220px; }
   .desktop-nav.visible {
     display: block; }
   .desktop-nav--container {
@@ -1021,15 +1022,15 @@ body.OFHidden {
   .desktop-nav__navData--title {
     font-size: 24px;
     font-weight: 600;
-    width: 180px; }
+    width: 180px;
+    padding-right: 20px; }
   .desktop-nav__navData--subMenu {
     display: flex;
     flex-wrap: wrap;
     flex: 0 0 calc(100% - 180px); }
   .desktop-nav__navData__subMenuList {
-    flex: 1 0 0; }
-    .desktop-nav__navData__subMenuList:not(:last-child) {
-      padding-right: 30px; }
+    flex: 1 0 0;
+    padding: 0 15px; }
     .desktop-nav__navData__subMenuList--title {
       font-size: 17px;
       font-weight: 600;
