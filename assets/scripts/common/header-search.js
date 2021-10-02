@@ -11,9 +11,11 @@ $(document).ready(function(){
         $('.navigation').removeClass('active')
         $('.header').find('.line2').removeClass('hidden')
         $('.header').find('.line1, .line3').removeClass('active')
-        if($(window).width() < 1200){
-            $('body').removeClass('OFHidden')
-        }
+        $('body').removeClass('OFHidden')
+
+        // Desktop Links
+        $('.desktop-nav').removeClass('visible')
+        $('.menuRow--item').removeClass('active')
     })
 
     hideSearchMobile.on('click', function(){
