@@ -816,7 +816,7 @@ body.OFHidden {
         transform: rotate(-45deg);
         width: 21px; }
 
-.navigation {
+.navigation-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -827,144 +827,146 @@ body.OFHidden {
   background-color: rgba(255, 255, 255, 0.8);
   display: none; }
   @media (min-width: 760px) {
+    .navigation-overlay {
+      padding-top: 135px; } }
+  .navigation-overlay.active {
+    display: block; }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  z-index: 6;
+  width: 300px;
+  height: 100%;
+  padding-top: 90px;
+  overflow-y: auto;
+  background-color: #9FD3CD;
+  transition: right 0.5s; }
+  @media (min-width: 760px) {
     .navigation {
       padding-top: 135px; } }
   .navigation.active {
-    display: block; }
-  .navigation__mainNav {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    padding-top: 90px;
-    overflow-y: auto;
-    background-color: #9FD3CD;
-    transition: right 0.5s; }
-    @media (min-width: 760px) {
-      .navigation__mainNav {
-        padding-top: 135px; } }
-    .navigation__mainNav.active {
-      right: 0; }
-    .navigation__mainNav--navBlock.level2menu, .navigation__mainNav--navBlock.level3Menu {
-      display: none;
-      margin-bottom: 30px; }
-    .navigation__mainNav__nav--item.active .link {
-      background-color: #35BDB2; }
-    .navigation__mainNav__nav--item.hasArrow .link {
-      position: relative; }
-      .navigation__mainNav__nav--item.hasArrow .link:before {
-        content: "";
-        position: absolute;
-        right: 25px;
-        top: 30px;
-        width: 8px;
-        height: 8px;
-        border-right: 2px solid #FFFFFF;
-        border-top: 2px solid #FFFFFF;
-        transform: rotate(45deg); }
-    .navigation__mainNav__nav--item.level2parent, .navigation__mainNav__nav--item.level3parent {
-      position: relative;
-      background-color: #35BDB2; }
-      .navigation__mainNav__nav--item.level2parent:before, .navigation__mainNav__nav--item.level3parent:before {
-        content: "";
-        position: absolute;
-        left: 25px;
-        top: 30px;
-        width: 8px;
-        height: 8px;
-        border-top: 2px solid #FFFFFF;
-        border-left: 2px solid #FFFFFF;
-        transform: rotate(-45deg); }
-      .navigation__mainNav__nav--item.level2parent .link, .navigation__mainNav__nav--item.level3parent .link {
-        padding-left: 45px; }
-    .navigation__mainNav__nav .link {
+    right: 0; }
+  .navigation--navBlock.level2menu, .navigation--navBlock.level3Menu {
+    display: none;
+    margin-bottom: 30px; }
+  .navigation__nav--item.active .link {
+    background-color: #35BDB2; }
+  .navigation__nav--item.hasArrow .link {
+    position: relative; }
+    .navigation__nav--item.hasArrow .link:before {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 30px;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid #FFFFFF;
+      border-top: 2px solid #FFFFFF;
+      transform: rotate(45deg); }
+  .navigation__nav--item.level2parent, .navigation__nav--item.level3parent {
+    position: relative;
+    background-color: #35BDB2; }
+    .navigation__nav--item.level2parent:before, .navigation__nav--item.level3parent:before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      top: 30px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #FFFFFF;
+      border-left: 2px solid #FFFFFF;
+      transform: rotate(-45deg); }
+    .navigation__nav--item.level2parent .link, .navigation__nav--item.level3parent .link {
+      padding-left: 45px; }
+  .navigation__nav .link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; }
+  .navigation__myAccount {
+    padding: 20px;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px; }
+    .navigation__myAccount .text {
+      font-size: 16px;
+      color: #FFFFFF;
+      font-weight: 500;
+      margin-right: 32px; }
+    .navigation__myAccount .link {
+      border: 2px solid #FFFFFF;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      height: 45px;
+      padding: 0 20px;
+      color: #FFFFFF;
+      text-decoration: none; }
+      .navigation__myAccount .link .iconSVG {
+        height: 20px;
+        width: 20px;
+        margin-right: 20px;
+        fill: #FFFFFF; }
+  .navigation__social {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px; }
+    .navigation__social--link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      margin: 0 10px; }
+      .navigation__social--link .iconSVG {
+        width: 28px;
+        height: 28px;
+        fill: #FFFFFF; }
+  .navigation__newsBlock {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 30px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    display: none; }
+    .navigation__newsBlock--link {
+      display: block;
+      text-decoration: none; }
+    .navigation__newsBlock--pic {
+      height: 120px;
+      border-radius: 10px 10px 0 0;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 25px; }
+    .navigation__newsBlock--title {
+      font-size: 17px;
+      font-weight: 600;
+      padding: 0 10px 10px 10px;
+      color: #253347; }
+    .navigation__newsBlock--text {
+      line-height: 1.5;
+      padding: 0 10px 10px 10px;
+      color: #253347; }
+  .navigation--links {
+    text-align: center;
+    padding-bottom: 32px;
+    color: #FFFFFF; }
+    .navigation--links .link {
       color: #FFFFFF;
       text-decoration: none;
-      display: block;
-      font-size: 18px;
-      font-weight: 500;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      padding: 0 20px; }
-    .navigation__mainNav__myAccount {
-      padding: 20px;
-      border-top: 2px solid #FFFFFF;
-      border-bottom: 2px solid #FFFFFF;
-      display: flex;
-      justify-content: right;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 32px; }
-      .navigation__mainNav__myAccount .text {
-        font-size: 16px;
-        color: #FFFFFF;
-        font-weight: 500;
-        margin-right: 32px; }
-      .navigation__mainNav__myAccount .link {
-        border: 2px solid #FFFFFF;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        height: 45px;
-        padding: 0 20px;
-        color: #FFFFFF;
-        text-decoration: none; }
-        .navigation__mainNav__myAccount .link .iconSVG {
-          height: 20px;
-          width: 20px;
-          margin-right: 20px;
-          fill: #FFFFFF; }
-    .navigation__mainNav__social {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 32px; }
-      .navigation__mainNav__social--link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        margin: 0 10px; }
-        .navigation__mainNav__social--link .iconSVG {
-          width: 28px;
-          height: 28px;
-          fill: #FFFFFF; }
-    .navigation__mainNav__newsBlock {
-      width: 100%;
-      max-width: 260px;
-      margin: 0 auto 30px;
-      border-radius: 5px;
-      padding: 10px;
-      background-color: #FFFFFF;
-      display: none; }
-      .navigation__mainNav__newsBlock--link {
-        display: block;
-        text-decoration: none; }
-      .navigation__mainNav__newsBlock--pic {
-        height: 120px;
-        border-radius: 10px 10px 0 0;
-        background-size: cover;
-        background-position: center;
-        margin-bottom: 25px; }
-      .navigation__mainNav__newsBlock--title {
-        font-size: 17px;
-        font-weight: 600;
-        padding: 0 10px 10px 10px;
-        color: #253347; }
-      .navigation__mainNav__newsBlock--text {
-        line-height: 1.5;
-        padding: 0 10px 10px 10px;
-        color: #253347; }
-    .navigation__mainNav--links {
-      text-align: center;
-      padding-bottom: 32px;
-      color: #FFFFFF; }
-      .navigation__mainNav--links .link {
-        color: #FFFFFF;
-        text-decoration: none;
-        padding: 0 10px; }
+      padding: 0 10px; }
 
 .menuRow {
   display: none; }

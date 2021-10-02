@@ -7,6 +7,7 @@ $(document).ready(function(){
         searchSectionMobile.slideToggle();
         $('.header').toggleClass('shadow')
         // Hide Mobile Nav
+        $('.navigation-overlay').removeClass('active')
         $('.navigation').removeClass('active')
         $('.header').find('.line2').removeClass('hidden')
         $('.header').find('.line1, .line3').removeClass('active')
