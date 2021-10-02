@@ -130,7 +130,7 @@
             }
             &--img{
                 height: 70px;
-                @include responsive('xl'){
+                @include responsive('xxl'){
                     height: 90px;
                 }
             }
@@ -147,7 +147,7 @@
             width: 100%;
             background-color: $color-white;
             border: none;
-            padding: 0 20px;
+            padding: 0 30px;
         }
         &--inner{
             width: 100%;
@@ -157,7 +157,7 @@
             align-items: center;
             justify-content: center;
             @include responsive('xl'){
-                border-top: 2px solid $color-grey-medium;
+                border-top: 2px solid $color-grey7;
                 max-width: none;
                 margin: 0;
                 padding: 15px 0;
@@ -188,7 +188,10 @@
                 display: block;
             }
             &--img{
-                height: 95px;
+                height: 60px;
+                @include responsive('xxxl'){
+                    height: 95px;
+                }
             }
         }
         &__fieldBox{

@@ -54,7 +54,7 @@ $(document).ready(function(){
     // Desktop Nav
     $('.menuRow--item').on('click', function(){
         var menuClass = $(this).data('desk-menu')
-        $(this).toggleClass('active')
+        $(this).addClass('active')
         $(this).siblings().removeClass('active')
         $('.desktop-nav').addClass('visible')
         $('.desktop-nav__navData.' + menuClass).show()
@@ -62,5 +62,5 @@ $(document).ready(function(){
         $('body').addClass('OFHidden')
         $('.header__searchBar').slideDown()
     })
-    
+
 })
