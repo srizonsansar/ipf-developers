@@ -24,6 +24,7 @@ $(document).ready(function(){
         $('body').removeClass('OFHidden')
         $('.desktop-nav').removeClass('visible')
         $('.menuRow--item').removeClass('active')
+        $('.header').removeClass('shadow')
     })
 
 })
