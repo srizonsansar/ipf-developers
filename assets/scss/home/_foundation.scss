@@ -1,5 +1,5 @@
 .foundation{
-    background-color: $color-grey5;
+    background-color: $color-grey3;
     padding: 50px 0;
     margin-bottom: 50px;
     @include responsive('md'){
@@ -17,7 +17,7 @@
         @extend %container;
         max-width: 1600px;
         @include responsive('lg'){
-            background-color: $color-grey5;
+            background-color: $color-grey3;
             border-radius: 10px;
             padding: 50px 30px 30px;
         }
