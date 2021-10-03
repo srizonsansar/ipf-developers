@@ -27,7 +27,7 @@
             justify-content: flex-end;
             align-items: center;
             width: 100%;
-            border-bottom: 2px solid transparentize($color-grey3, .3);
+            border-bottom: 2px solid transparentize($color-grey, .3);
             padding-bottom: 15px;
             margin-bottom: 12px;
             font-size: 13px;
@@ -49,7 +49,7 @@
             }
         }
         &__login{
-            border-left: 2px solid darken($color-grey3, 5%);
+            border-left: 2px solid darken($color-grey, 5%);
             padding-left: 15px;
             &--link{
                 display: flex;
@@ -138,7 +138,7 @@
     }
     &__searchBar{
         padding: 15px 0;
-        border-top: 2px solid $color-grey3;
+        border-top: 2px solid $color-grey;
         display: none;
         @include responsive('xl'){
             position: fixed;
@@ -157,7 +157,7 @@
             align-items: center;
             justify-content: center;
             @include responsive('xl'){
-                border-top: 2px solid $color-grey7;
+                border-top: 2px solid $color-grey4;
                 max-width: none;
                 margin: 0;
                 padding: 15px 0;
@@ -195,7 +195,7 @@
             }
         }
         &__fieldBox{
-            background-color: $color-grey3;
+            background-color: $color-grey;
             border-radius: 4px;
             margin-right: 15px;
             width: 300px;
